@@ -1,6 +1,6 @@
 //
 //  PokemonView.swift
-//  PokemonDemo
+//  Pokedex
 //
 //  Created by Fahri Zulkarnaen on 24/02/23.
 //

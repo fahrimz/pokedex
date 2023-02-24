@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		11A9618629A8A640006F379B /* PokemonDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9618529A8A640006F379B /* PokemonDemoApp.swift */; };
+		11A9618629A8A640006F379B /* PokedexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9618529A8A640006F379B /* PokedexApp.swift */; };
 		11A9618829A8A640006F379B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9618729A8A640006F379B /* ContentView.swift */; };
 		11A9618A29A8A641006F379B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11A9618929A8A641006F379B /* Assets.xcassets */; };
 		11A9618D29A8A641006F379B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11A9618C29A8A641006F379B /* Preview Assets.xcassets */; };
@@ -21,8 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		11A9618229A8A640006F379B /* PokemonDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		11A9618529A8A640006F379B /* PokemonDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDemoApp.swift; sourceTree = "<group>"; };
+		11A9618229A8A640006F379B /* Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		11A9618529A8A640006F379B /* PokedexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexApp.swift; sourceTree = "<group>"; };
 		11A9618729A8A640006F379B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		11A9618929A8A641006F379B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11A9618C29A8A641006F379B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -49,7 +49,7 @@
 		11A9617929A8A640006F379B = {
 			isa = PBXGroup;
 			children = (
-				11A9618429A8A640006F379B /* PokemonDemo */,
+				11A9618429A8A640006F379B /* Pokedex */,
 				11A9618329A8A640006F379B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,12 +57,12 @@
 		11A9618329A8A640006F379B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				11A9618229A8A640006F379B /* PokemonDemo.app */,
+				11A9618229A8A640006F379B /* Pokedex.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		11A9618429A8A640006F379B /* PokemonDemo */ = {
+		11A9618429A8A640006F379B /* Pokedex */ = {
 			isa = PBXGroup;
 			children = (
 				11A9619729A8A75A006F379B /* ViewModels */,
@@ -70,12 +70,12 @@
 				11A9619529A8A74D006F379B /* Managers */,
 				11A9619429A8A74A006F379B /* Helpers */,
 				11A9619329A8A6DF006F379B /* Data */,
-				11A9618529A8A640006F379B /* PokemonDemoApp.swift */,
+				11A9618529A8A640006F379B /* PokedexApp.swift */,
 				11A961A429A8A9D5006F379B /* Views */,
 				11A9618929A8A641006F379B /* Assets.xcassets */,
 				11A9618B29A8A641006F379B /* Preview Content */,
 			);
-			path = PokemonDemo;
+			path = Pokedex;
 			sourceTree = "<group>";
 		};
 		11A9618B29A8A641006F379B /* Preview Content */ = {
@@ -139,9 +139,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		11A9618129A8A640006F379B /* PokemonDemo */ = {
+		11A9618129A8A640006F379B /* Pokedex */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 11A9619029A8A641006F379B /* Build configuration list for PBXNativeTarget "PokemonDemo" */;
+			buildConfigurationList = 11A9619029A8A641006F379B /* Build configuration list for PBXNativeTarget "Pokedex" */;
 			buildPhases = (
 				11A9617E29A8A640006F379B /* Sources */,
 				11A9617F29A8A640006F379B /* Frameworks */,
@@ -151,9 +151,9 @@
 			);
 			dependencies = (
 			);
-			name = PokemonDemo;
-			productName = PokemonDemo;
-			productReference = 11A9618229A8A640006F379B /* PokemonDemo.app */;
+			name = Pokedex;
+			productName = Pokedex;
+			productReference = 11A9618229A8A640006F379B /* Pokedex.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -171,7 +171,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 11A9617D29A8A640006F379B /* Build configuration list for PBXProject "PokemonDemo" */;
+			buildConfigurationList = 11A9617D29A8A640006F379B /* Build configuration list for PBXProject "Pokedex" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -184,7 +184,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				11A9618129A8A640006F379B /* PokemonDemo */,
+				11A9618129A8A640006F379B /* Pokedex */,
 			);
 		};
 /* End PBXProject section */
@@ -212,7 +212,7 @@
 				11A961A329A8A7C2006F379B /* PokemonModel.swift in Sources */,
 				11A9619929A8A76F006F379B /* ViewModel.swift in Sources */,
 				11A961A129A8A7BB006F379B /* PokemonManagers.swift in Sources */,
-				11A9618629A8A640006F379B /* PokemonDemoApp.swift in Sources */,
+				11A9618629A8A640006F379B /* PokedexApp.swift in Sources */,
 				11A961A629A8AA68006F379B /* PokemonDetailView.swift in Sources */,
 				11A9619F29A8A7B1006F379B /* Helpers.swift in Sources */,
 			);
@@ -342,7 +342,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PokemonDemo/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Pokedex/Preview Content\"";
 				DEVELOPMENT_TEAM = Q5YMW62LKL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -356,7 +356,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.PokemonDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.pokedex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -371,7 +371,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PokemonDemo/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Pokedex/Preview Content\"";
 				DEVELOPMENT_TEAM = Q5YMW62LKL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -385,7 +385,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.PokemonDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.pokedex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -396,7 +396,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		11A9617D29A8A640006F379B /* Build configuration list for PBXProject "PokemonDemo" */ = {
+		11A9617D29A8A640006F379B /* Build configuration list for PBXProject "Pokedex" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				11A9618E29A8A641006F379B /* Debug */,
@@ -405,7 +405,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		11A9619029A8A641006F379B /* Build configuration list for PBXNativeTarget "PokemonDemo" */ = {
+		11A9619029A8A641006F379B /* Build configuration list for PBXNativeTarget "Pokedex" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				11A9619129A8A641006F379B /* Debug */,
