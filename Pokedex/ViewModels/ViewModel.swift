@@ -47,8 +47,25 @@ final class ViewModel: ObservableObject {
     
     func formatHW(value: Int) -> String {
         let dValue = Double(value)
-        let string = String(format: "%.2f", dValue / 10)
+        let string = String(format: "%.1f", dValue / 10)
         
         return string
+    }
+    
+    func kgToLbs(kg: Int) -> String {
+        let lbs = Double(kg) * 2.2046
+        let string = String(format: "%.1f", lbs / 10)
+
+        return string
+    }
+    
+    func mToInch(m: Int) -> String {
+        let inchTotal = Double(m) * 3.93700787
+        let dFeet = floor(inchTotal / 12)
+        let feet = Int(dFeet)
+        let dInch = (inchTotal - dFeet) * 12
+        let inch = Int(ceil(dInch / 100))
+        
+        return "\(feet)\'\(inch)\""
     }
 }

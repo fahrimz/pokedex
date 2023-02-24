@@ -16,9 +16,9 @@ struct PokemonDetailView: View {
             PokemonView(pokemon: pokemon)
             
             VStack(spacing: 10) {
-                Text("**ID**: \(vm.pokemonDetails?.id ?? 0)")
-                Text("**Weight**: \(vm.formatHW(value: vm.pokemonDetails?.weight ?? 0)) KG")
-                Text("**Height**: \(vm.formatHW(value: vm.pokemonDetails?.height ?? 0)) M")
+                Text("**Pokedex Entry**: \(vm.pokemonDetails?.id ?? 0)")
+                Text("**Weight**: \(vm.formatHW(value: vm.pokemonDetails?.weight ?? 0)) kg (\(vm.kgToLbs(kg: vm.pokemonDetails?.weight ?? 0)) lbs.)")
+                Text("**Height**: \(vm.formatHW(value: vm.pokemonDetails?.height ?? 0)) m (\(vm.mToInch(m: vm.pokemonDetails?.height ?? 0)))")
             }
         }.onAppear {
             vm.getDetails(pokemon: pokemon)
