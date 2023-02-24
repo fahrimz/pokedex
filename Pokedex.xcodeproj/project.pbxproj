@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		113015DC29A8FF9800B5CA27 /* TypeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113015DB29A8FF9800B5CA27 /* TypeButton.swift */; };
 		11A9618629A8A640006F379B /* PokedexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9618529A8A640006F379B /* PokedexApp.swift */; };
 		11A9618829A8A640006F379B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9618729A8A640006F379B /* ContentView.swift */; };
 		11A9618A29A8A641006F379B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11A9618929A8A641006F379B /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		113015DB29A8FF9800B5CA27 /* TypeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeButton.swift; sourceTree = "<group>"; };
 		11A9618229A8A640006F379B /* Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11A9618529A8A640006F379B /* PokedexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexApp.swift; sourceTree = "<group>"; };
 		11A9618729A8A640006F379B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				11A9618729A8A640006F379B /* ContentView.swift */,
 				11A961A529A8AA68006F379B /* PokemonDetailView.swift */,
 				11A961A729A8ACF7006F379B /* PokemonView.swift */,
+				113015DB29A8FF9800B5CA27 /* TypeButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			files = (
 				11A961A829A8ACF7006F379B /* PokemonView.swift in Sources */,
 				11A9618829A8A640006F379B /* ContentView.swift in Sources */,
+				113015DC29A8FF9800B5CA27 /* TypeButton.swift in Sources */,
 				11A961A329A8A7C2006F379B /* PokemonModel.swift in Sources */,
 				11A9619929A8A76F006F379B /* ViewModel.swift in Sources */,
 				11A961A129A8A7BB006F379B /* PokemonManagers.swift in Sources */,

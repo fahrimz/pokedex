@@ -4,608 +4,2369 @@
   "previous": null,
   "results": [
     {
+      "id": 1,
       "name": "bulbasaur",
-      "url": "https://pokeapi.co/api/v2/pokemon/1/"
+      "url": "https://pokeapi.co/api/v2/pokemon/1/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "grass"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "poison"
+          }
+        }
+      ]
     },
     {
+      "id": 2,
       "name": "ivysaur",
-      "url": "https://pokeapi.co/api/v2/pokemon/2/"
+      "url": "https://pokeapi.co/api/v2/pokemon/2/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "grass"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "poison"
+          }
+        }
+      ]
     },
     {
+      "id": 3,
       "name": "venusaur",
-      "url": "https://pokeapi.co/api/v2/pokemon/3/"
+      "url": "https://pokeapi.co/api/v2/pokemon/3/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "grass"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "poison"
+          }
+        }
+      ]
     },
     {
+      "id": 4,
       "name": "charmander",
-      "url": "https://pokeapi.co/api/v2/pokemon/4/"
+      "url": "https://pokeapi.co/api/v2/pokemon/4/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "fire"
+          }
+        }
+      ]
     },
     {
+      "id": 5,
       "name": "charmeleon",
-      "url": "https://pokeapi.co/api/v2/pokemon/5/"
+      "url": "https://pokeapi.co/api/v2/pokemon/5/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "fire"
+          }
+        }
+      ]
     },
     {
+      "id": 6,
       "name": "charizard",
-      "url": "https://pokeapi.co/api/v2/pokemon/6/"
+      "url": "https://pokeapi.co/api/v2/pokemon/6/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "fire"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "flying"
+          }
+        }
+      ]
     },
     {
+      "id": 7,
       "name": "squirtle",
-      "url": "https://pokeapi.co/api/v2/pokemon/7/"
+      "url": "https://pokeapi.co/api/v2/pokemon/7/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "water"
+          }
+        }
+      ]
     },
     {
+      "id": 8,
       "name": "wartortle",
-      "url": "https://pokeapi.co/api/v2/pokemon/8/"
+      "url": "https://pokeapi.co/api/v2/pokemon/8/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "water"
+          }
+        }
+      ]
     },
     {
+      "id": 9,
       "name": "blastoise",
-      "url": "https://pokeapi.co/api/v2/pokemon/9/"
+      "url": "https://pokeapi.co/api/v2/pokemon/9/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "water"
+          }
+        }
+      ]
     },
     {
+      "id": 10,
       "name": "caterpie",
-      "url": "https://pokeapi.co/api/v2/pokemon/10/"
+      "url": "https://pokeapi.co/api/v2/pokemon/10/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "bug"
+          }
+        }
+      ]
     },
     {
+      "id": 11,
       "name": "metapod",
-      "url": "https://pokeapi.co/api/v2/pokemon/11/"
+      "url": "https://pokeapi.co/api/v2/pokemon/11/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "bug"
+          }
+        }
+      ]
     },
     {
+      "id": 12,
       "name": "butterfree",
-      "url": "https://pokeapi.co/api/v2/pokemon/12/"
+      "url": "https://pokeapi.co/api/v2/pokemon/12/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "bug"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "flying"
+          }
+        }
+      ]
     },
     {
+      "id": 13,
       "name": "weedle",
-      "url": "https://pokeapi.co/api/v2/pokemon/13/"
+      "url": "https://pokeapi.co/api/v2/pokemon/13/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "bug"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "poison"
+          }
+        }
+      ]
     },
     {
+      "id": 14,
       "name": "kakuna",
-      "url": "https://pokeapi.co/api/v2/pokemon/14/"
+      "url": "https://pokeapi.co/api/v2/pokemon/14/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "bug"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "poison"
+          }
+        }
+      ]
     },
     {
+      "id": 15,
       "name": "beedrill",
-      "url": "https://pokeapi.co/api/v2/pokemon/15/"
+      "url": "https://pokeapi.co/api/v2/pokemon/15/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "bug"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "poison"
+          }
+        }
+      ]
     },
     {
+      "id": 16,
       "name": "pidgey",
-      "url": "https://pokeapi.co/api/v2/pokemon/16/"
+      "url": "https://pokeapi.co/api/v2/pokemon/16/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "normal"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "flying"
+          }
+        }
+      ]
     },
     {
+      "id": 17,
       "name": "pidgeotto",
-      "url": "https://pokeapi.co/api/v2/pokemon/17/"
+      "url": "https://pokeapi.co/api/v2/pokemon/17/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "normal"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "flying"
+          }
+        }
+      ]
     },
     {
+      "id": 18,
       "name": "pidgeot",
-      "url": "https://pokeapi.co/api/v2/pokemon/18/"
+      "url": "https://pokeapi.co/api/v2/pokemon/18/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "normal"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "flying"
+          }
+        }
+      ]
     },
     {
+      "id": 19,
       "name": "rattata",
-      "url": "https://pokeapi.co/api/v2/pokemon/19/"
+      "url": "https://pokeapi.co/api/v2/pokemon/19/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "normal"
+          }
+        }
+      ]
     },
     {
+      "id": 20,
       "name": "raticate",
-      "url": "https://pokeapi.co/api/v2/pokemon/20/"
+      "url": "https://pokeapi.co/api/v2/pokemon/20/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "normal"
+          }
+        }
+      ]
     },
     {
+      "id": 21,
       "name": "spearow",
-      "url": "https://pokeapi.co/api/v2/pokemon/21/"
+      "url": "https://pokeapi.co/api/v2/pokemon/21/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "normal"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "flying"
+          }
+        }
+      ]
     },
     {
+      "id": 22,
       "name": "fearow",
-      "url": "https://pokeapi.co/api/v2/pokemon/22/"
+      "url": "https://pokeapi.co/api/v2/pokemon/22/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "normal"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "flying"
+          }
+        }
+      ]
     },
     {
+      "id": 23,
       "name": "ekans",
-      "url": "https://pokeapi.co/api/v2/pokemon/23/"
+      "url": "https://pokeapi.co/api/v2/pokemon/23/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "poison"
+          }
+        }
+      ]
     },
     {
+      "id": 24,
       "name": "arbok",
-      "url": "https://pokeapi.co/api/v2/pokemon/24/"
+      "url": "https://pokeapi.co/api/v2/pokemon/24/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "poison"
+          }
+        }
+      ]
     },
     {
+      "id": 25,
       "name": "pikachu",
-      "url": "https://pokeapi.co/api/v2/pokemon/25/"
+      "url": "https://pokeapi.co/api/v2/pokemon/25/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "electric"
+          }
+        }
+      ]
     },
     {
+      "id": 26,
       "name": "raichu",
-      "url": "https://pokeapi.co/api/v2/pokemon/26/"
+      "url": "https://pokeapi.co/api/v2/pokemon/26/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "electric"
+          }
+        }
+      ]
     },
     {
+      "id": 27,
       "name": "sandshrew",
-      "url": "https://pokeapi.co/api/v2/pokemon/27/"
+      "url": "https://pokeapi.co/api/v2/pokemon/27/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "ground"
+          }
+        }
+      ]
     },
     {
+      "id": 28,
       "name": "sandslash",
-      "url": "https://pokeapi.co/api/v2/pokemon/28/"
+      "url": "https://pokeapi.co/api/v2/pokemon/28/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "ground"
+          }
+        }
+      ]
     },
     {
+      "id": 29,
       "name": "nidoran-f",
-      "url": "https://pokeapi.co/api/v2/pokemon/29/"
+      "url": "https://pokeapi.co/api/v2/pokemon/29/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "poison"
+          }
+        }
+      ]
     },
     {
+      "id": 30,
       "name": "nidorina",
-      "url": "https://pokeapi.co/api/v2/pokemon/30/"
+      "url": "https://pokeapi.co/api/v2/pokemon/30/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "poison"
+          }
+        }
+      ]
     },
     {
+      "id": 31,
       "name": "nidoqueen",
-      "url": "https://pokeapi.co/api/v2/pokemon/31/"
+      "url": "https://pokeapi.co/api/v2/pokemon/31/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "poison"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "ground"
+          }
+        }
+      ]
     },
     {
+      "id": 32,
       "name": "nidoran-m",
-      "url": "https://pokeapi.co/api/v2/pokemon/32/"
+      "url": "https://pokeapi.co/api/v2/pokemon/32/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "poison"
+          }
+        }
+      ]
     },
     {
+      "id": 33,
       "name": "nidorino",
-      "url": "https://pokeapi.co/api/v2/pokemon/33/"
+      "url": "https://pokeapi.co/api/v2/pokemon/33/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "poison"
+          }
+        }
+      ]
     },
     {
+      "id": 34,
       "name": "nidoking",
-      "url": "https://pokeapi.co/api/v2/pokemon/34/"
+      "url": "https://pokeapi.co/api/v2/pokemon/34/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "poison"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "ground"
+          }
+        }
+      ]
     },
     {
+      "id": 35,
       "name": "clefairy",
-      "url": "https://pokeapi.co/api/v2/pokemon/35/"
+      "url": "https://pokeapi.co/api/v2/pokemon/35/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "fairy"
+          }
+        }
+      ]
     },
     {
+      "id": 36,
       "name": "clefable",
-      "url": "https://pokeapi.co/api/v2/pokemon/36/"
+      "url": "https://pokeapi.co/api/v2/pokemon/36/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "fairy"
+          }
+        }
+      ]
     },
     {
+      "id": 37,
       "name": "vulpix",
-      "url": "https://pokeapi.co/api/v2/pokemon/37/"
+      "url": "https://pokeapi.co/api/v2/pokemon/37/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "fire"
+          }
+        }
+      ]
     },
     {
+      "id": 38,
       "name": "ninetales",
-      "url": "https://pokeapi.co/api/v2/pokemon/38/"
+      "url": "https://pokeapi.co/api/v2/pokemon/38/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "fire"
+          }
+        }
+      ]
     },
     {
+      "id": 39,
       "name": "jigglypuff",
-      "url": "https://pokeapi.co/api/v2/pokemon/39/"
+      "url": "https://pokeapi.co/api/v2/pokemon/39/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "normal"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "fairy"
+          }
+        }
+      ]
     },
     {
+      "id": 40,
       "name": "wigglytuff",
-      "url": "https://pokeapi.co/api/v2/pokemon/40/"
+      "url": "https://pokeapi.co/api/v2/pokemon/40/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "normal"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "fairy"
+          }
+        }
+      ]
     },
     {
+      "id": 41,
       "name": "zubat",
-      "url": "https://pokeapi.co/api/v2/pokemon/41/"
+      "url": "https://pokeapi.co/api/v2/pokemon/41/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "poison"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "flying"
+          }
+        }
+      ]
     },
     {
+      "id": 42,
       "name": "golbat",
-      "url": "https://pokeapi.co/api/v2/pokemon/42/"
+      "url": "https://pokeapi.co/api/v2/pokemon/42/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "poison"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "flying"
+          }
+        }
+      ]
     },
     {
+      "id": 43,
       "name": "oddish",
-      "url": "https://pokeapi.co/api/v2/pokemon/43/"
+      "url": "https://pokeapi.co/api/v2/pokemon/43/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "grass"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "poison"
+          }
+        }
+      ]
     },
     {
+      "id": 44,
       "name": "gloom",
-      "url": "https://pokeapi.co/api/v2/pokemon/44/"
+      "url": "https://pokeapi.co/api/v2/pokemon/44/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "grass"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "poison"
+          }
+        }
+      ]
     },
     {
+      "id": 45,
       "name": "vileplume",
-      "url": "https://pokeapi.co/api/v2/pokemon/45/"
+      "url": "https://pokeapi.co/api/v2/pokemon/45/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "grass"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "poison"
+          }
+        }
+      ]
     },
     {
+      "id": 46,
       "name": "paras",
-      "url": "https://pokeapi.co/api/v2/pokemon/46/"
+      "url": "https://pokeapi.co/api/v2/pokemon/46/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "bug"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "poison"
+          }
+        }
+      ]
     },
     {
+      "id": 47,
       "name": "parasect",
-      "url": "https://pokeapi.co/api/v2/pokemon/47/"
+      "url": "https://pokeapi.co/api/v2/pokemon/47/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "bug"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "poison"
+          }
+        }
+      ]
     },
     {
+      "id": 48,
       "name": "venonat",
-      "url": "https://pokeapi.co/api/v2/pokemon/48/"
+      "url": "https://pokeapi.co/api/v2/pokemon/48/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "bug"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "poison"
+          }
+        }
+      ]
     },
     {
+      "id": 49,
       "name": "venomoth",
-      "url": "https://pokeapi.co/api/v2/pokemon/49/"
+      "url": "https://pokeapi.co/api/v2/pokemon/49/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "bug"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "poison"
+          }
+        }
+      ]
     },
     {
+      "id": 50,
       "name": "diglett",
-      "url": "https://pokeapi.co/api/v2/pokemon/50/"
+      "url": "https://pokeapi.co/api/v2/pokemon/50/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "ground"
+          }
+        }
+      ]
     },
     {
+      "id": 51,
       "name": "dugtrio",
-      "url": "https://pokeapi.co/api/v2/pokemon/51/"
+      "url": "https://pokeapi.co/api/v2/pokemon/51/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "ground"
+          }
+        }
+      ]
     },
     {
+      "id": 52,
       "name": "meowth",
-      "url": "https://pokeapi.co/api/v2/pokemon/52/"
+      "url": "https://pokeapi.co/api/v2/pokemon/52/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "normal"
+          }
+        }
+      ]
     },
     {
+      "id": 53,
       "name": "persian",
-      "url": "https://pokeapi.co/api/v2/pokemon/53/"
+      "url": "https://pokeapi.co/api/v2/pokemon/53/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "normal"
+          }
+        }
+      ]
     },
     {
+      "id": 54,
       "name": "psyduck",
-      "url": "https://pokeapi.co/api/v2/pokemon/54/"
+      "url": "https://pokeapi.co/api/v2/pokemon/54/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "water"
+          }
+        }
+      ]
     },
     {
+      "id": 55,
       "name": "golduck",
-      "url": "https://pokeapi.co/api/v2/pokemon/55/"
+      "url": "https://pokeapi.co/api/v2/pokemon/55/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "water"
+          }
+        }
+      ]
     },
     {
+      "id": 56,
       "name": "mankey",
-      "url": "https://pokeapi.co/api/v2/pokemon/56/"
+      "url": "https://pokeapi.co/api/v2/pokemon/56/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "fighting"
+          }
+        }
+      ]
     },
     {
+      "id": 57,
       "name": "primeape",
-      "url": "https://pokeapi.co/api/v2/pokemon/57/"
+      "url": "https://pokeapi.co/api/v2/pokemon/57/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "fighting"
+          }
+        }
+      ]
     },
     {
+      "id": 58,
       "name": "growlithe",
-      "url": "https://pokeapi.co/api/v2/pokemon/58/"
+      "url": "https://pokeapi.co/api/v2/pokemon/58/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "fire"
+          }
+        }
+      ]
     },
     {
+      "id": 59,
       "name": "arcanine",
-      "url": "https://pokeapi.co/api/v2/pokemon/59/"
+      "url": "https://pokeapi.co/api/v2/pokemon/59/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "fire"
+          }
+        }
+      ]
     },
     {
+      "id": 60,
       "name": "poliwag",
-      "url": "https://pokeapi.co/api/v2/pokemon/60/"
+      "url": "https://pokeapi.co/api/v2/pokemon/60/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "water"
+          }
+        }
+      ]
     },
     {
+      "id": 61,
       "name": "poliwhirl",
-      "url": "https://pokeapi.co/api/v2/pokemon/61/"
+      "url": "https://pokeapi.co/api/v2/pokemon/61/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "water"
+          }
+        }
+      ]
     },
     {
+      "id": 62,
       "name": "poliwrath",
-      "url": "https://pokeapi.co/api/v2/pokemon/62/"
+      "url": "https://pokeapi.co/api/v2/pokemon/62/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "water"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "fighting"
+          }
+        }
+      ]
     },
     {
+      "id": 63,
       "name": "abra",
-      "url": "https://pokeapi.co/api/v2/pokemon/63/"
+      "url": "https://pokeapi.co/api/v2/pokemon/63/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "psychic"
+          }
+        }
+      ]
     },
     {
+      "id": 64,
       "name": "kadabra",
-      "url": "https://pokeapi.co/api/v2/pokemon/64/"
+      "url": "https://pokeapi.co/api/v2/pokemon/64/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "psychic"
+          }
+        }
+      ]
     },
     {
+      "id": 65,
       "name": "alakazam",
-      "url": "https://pokeapi.co/api/v2/pokemon/65/"
+      "url": "https://pokeapi.co/api/v2/pokemon/65/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "psychic"
+          }
+        }
+      ]
     },
     {
+      "id": 66,
       "name": "machop",
-      "url": "https://pokeapi.co/api/v2/pokemon/66/"
+      "url": "https://pokeapi.co/api/v2/pokemon/66/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "fighting"
+          }
+        }
+      ]
     },
     {
+      "id": 67,
       "name": "machoke",
-      "url": "https://pokeapi.co/api/v2/pokemon/67/"
+      "url": "https://pokeapi.co/api/v2/pokemon/67/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "fighting"
+          }
+        }
+      ]
     },
     {
+      "id": 68,
       "name": "machamp",
-      "url": "https://pokeapi.co/api/v2/pokemon/68/"
+      "url": "https://pokeapi.co/api/v2/pokemon/68/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "fighting"
+          }
+        }
+      ]
     },
     {
+      "id": 69,
       "name": "bellsprout",
-      "url": "https://pokeapi.co/api/v2/pokemon/69/"
+      "url": "https://pokeapi.co/api/v2/pokemon/69/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "grass"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "poison"
+          }
+        }
+      ]
     },
     {
+      "id": 70,
       "name": "weepinbell",
-      "url": "https://pokeapi.co/api/v2/pokemon/70/"
+      "url": "https://pokeapi.co/api/v2/pokemon/70/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "grass"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "poison"
+          }
+        }
+      ]
     },
     {
+      "id": 71,
       "name": "victreebel",
-      "url": "https://pokeapi.co/api/v2/pokemon/71/"
+      "url": "https://pokeapi.co/api/v2/pokemon/71/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "grass"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "poison"
+          }
+        }
+      ]
     },
     {
+      "id": 72,
       "name": "tentacool",
-      "url": "https://pokeapi.co/api/v2/pokemon/72/"
+      "url": "https://pokeapi.co/api/v2/pokemon/72/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "water"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "poison"
+          }
+        }
+      ]
     },
     {
+      "id": 73,
       "name": "tentacruel",
-      "url": "https://pokeapi.co/api/v2/pokemon/73/"
+      "url": "https://pokeapi.co/api/v2/pokemon/73/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "water"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "poison"
+          }
+        }
+      ]
     },
     {
+      "id": 74,
       "name": "geodude",
-      "url": "https://pokeapi.co/api/v2/pokemon/74/"
+      "url": "https://pokeapi.co/api/v2/pokemon/74/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "rock"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "ground"
+          }
+        }
+      ]
     },
     {
+      "id": 75,
       "name": "graveler",
-      "url": "https://pokeapi.co/api/v2/pokemon/75/"
+      "url": "https://pokeapi.co/api/v2/pokemon/75/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "rock"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "ground"
+          }
+        }
+      ]
     },
     {
+      "id": 76,
       "name": "golem",
-      "url": "https://pokeapi.co/api/v2/pokemon/76/"
+      "url": "https://pokeapi.co/api/v2/pokemon/76/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "rock"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "ground"
+          }
+        }
+      ]
     },
     {
+      "id": 77,
       "name": "ponyta",
-      "url": "https://pokeapi.co/api/v2/pokemon/77/"
+      "url": "https://pokeapi.co/api/v2/pokemon/77/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "fire"
+          }
+        }
+      ]
     },
     {
+      "id": 78,
       "name": "rapidash",
-      "url": "https://pokeapi.co/api/v2/pokemon/78/"
+      "url": "https://pokeapi.co/api/v2/pokemon/78/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "fire"
+          }
+        }
+      ]
     },
     {
+      "id": 79,
       "name": "slowpoke",
-      "url": "https://pokeapi.co/api/v2/pokemon/79/"
+      "url": "https://pokeapi.co/api/v2/pokemon/79/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "water"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "psychic"
+          }
+        }
+      ]
     },
     {
+      "id": 80,
       "name": "slowbro",
-      "url": "https://pokeapi.co/api/v2/pokemon/80/"
+      "url": "https://pokeapi.co/api/v2/pokemon/80/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "water"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "psychic"
+          }
+        }
+      ]
     },
     {
+      "id": 81,
       "name": "magnemite",
-      "url": "https://pokeapi.co/api/v2/pokemon/81/"
+      "url": "https://pokeapi.co/api/v2/pokemon/81/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "electric"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "steel"
+          }
+        }
+      ]
     },
     {
+      "id": 82,
       "name": "magneton",
-      "url": "https://pokeapi.co/api/v2/pokemon/82/"
+      "url": "https://pokeapi.co/api/v2/pokemon/82/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "electric"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "steel"
+          }
+        }
+      ]
     },
     {
+      "id": 83,
       "name": "farfetchd",
-      "url": "https://pokeapi.co/api/v2/pokemon/83/"
+      "url": "https://pokeapi.co/api/v2/pokemon/83/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "normal"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "flying"
+          }
+        }
+      ]
     },
     {
+      "id": 84,
       "name": "doduo",
-      "url": "https://pokeapi.co/api/v2/pokemon/84/"
+      "url": "https://pokeapi.co/api/v2/pokemon/84/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "normal"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "flying"
+          }
+        }
+      ]
     },
     {
+      "id": 85,
       "name": "dodrio",
-      "url": "https://pokeapi.co/api/v2/pokemon/85/"
+      "url": "https://pokeapi.co/api/v2/pokemon/85/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "normal"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "flying"
+          }
+        }
+      ]
     },
     {
+      "id": 86,
       "name": "seel",
-      "url": "https://pokeapi.co/api/v2/pokemon/86/"
+      "url": "https://pokeapi.co/api/v2/pokemon/86/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "water"
+          }
+        }
+      ]
     },
     {
+      "id": 87,
       "name": "dewgong",
-      "url": "https://pokeapi.co/api/v2/pokemon/87/"
+      "url": "https://pokeapi.co/api/v2/pokemon/87/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "water"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "ice"
+          }
+        }
+      ]
     },
     {
+      "id": 88,
       "name": "grimer",
-      "url": "https://pokeapi.co/api/v2/pokemon/88/"
+      "url": "https://pokeapi.co/api/v2/pokemon/88/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "poison"
+          }
+        }
+      ]
     },
     {
+      "id": 89,
       "name": "muk",
-      "url": "https://pokeapi.co/api/v2/pokemon/89/"
+      "url": "https://pokeapi.co/api/v2/pokemon/89/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "poison"
+          }
+        }
+      ]
     },
     {
+      "id": 90,
       "name": "shellder",
-      "url": "https://pokeapi.co/api/v2/pokemon/90/"
+      "url": "https://pokeapi.co/api/v2/pokemon/90/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "water"
+          }
+        }
+      ]
     },
     {
+      "id": 91,
       "name": "cloyster",
-      "url": "https://pokeapi.co/api/v2/pokemon/91/"
+      "url": "https://pokeapi.co/api/v2/pokemon/91/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "water"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "ice"
+          }
+        }
+      ]
     },
     {
+      "id": 92,
       "name": "gastly",
-      "url": "https://pokeapi.co/api/v2/pokemon/92/"
+      "url": "https://pokeapi.co/api/v2/pokemon/92/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "ghost"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "poison"
+          }
+        }
+      ]
     },
     {
+      "id": 93,
       "name": "haunter",
-      "url": "https://pokeapi.co/api/v2/pokemon/93/"
+      "url": "https://pokeapi.co/api/v2/pokemon/93/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "ghost"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "poison"
+          }
+        }
+      ]
     },
     {
+      "id": 94,
       "name": "gengar",
-      "url": "https://pokeapi.co/api/v2/pokemon/94/"
+      "url": "https://pokeapi.co/api/v2/pokemon/94/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "ghost"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "poison"
+          }
+        }
+      ]
     },
     {
+      "id": 95,
       "name": "onix",
-      "url": "https://pokeapi.co/api/v2/pokemon/95/"
+      "url": "https://pokeapi.co/api/v2/pokemon/95/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "rock"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "ground"
+          }
+        }
+      ]
     },
     {
+      "id": 96,
       "name": "drowzee",
-      "url": "https://pokeapi.co/api/v2/pokemon/96/"
+      "url": "https://pokeapi.co/api/v2/pokemon/96/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "psychic"
+          }
+        }
+      ]
     },
     {
+      "id": 97,
       "name": "hypno",
-      "url": "https://pokeapi.co/api/v2/pokemon/97/"
+      "url": "https://pokeapi.co/api/v2/pokemon/97/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "psychic"
+          }
+        }
+      ]
     },
     {
+      "id": 98,
       "name": "krabby",
-      "url": "https://pokeapi.co/api/v2/pokemon/98/"
+      "url": "https://pokeapi.co/api/v2/pokemon/98/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "water"
+          }
+        }
+      ]
     },
     {
+      "id": 99,
       "name": "kingler",
-      "url": "https://pokeapi.co/api/v2/pokemon/99/"
+      "url": "https://pokeapi.co/api/v2/pokemon/99/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "water"
+          }
+        }
+      ]
     },
     {
+      "id": 100,
       "name": "voltorb",
-      "url": "https://pokeapi.co/api/v2/pokemon/100/"
+      "url": "https://pokeapi.co/api/v2/pokemon/100/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "electric"
+          }
+        }
+      ]
     },
     {
+      "id": 101,
       "name": "electrode",
-      "url": "https://pokeapi.co/api/v2/pokemon/101/"
+      "url": "https://pokeapi.co/api/v2/pokemon/101/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "electric"
+          }
+        }
+      ]
     },
     {
+      "id": 102,
       "name": "exeggcute",
-      "url": "https://pokeapi.co/api/v2/pokemon/102/"
+      "url": "https://pokeapi.co/api/v2/pokemon/102/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "grass"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "psychic"
+          }
+        }
+      ]
     },
     {
+      "id": 103,
       "name": "exeggutor",
-      "url": "https://pokeapi.co/api/v2/pokemon/103/"
+      "url": "https://pokeapi.co/api/v2/pokemon/103/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "grass"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "psychic"
+          }
+        }
+      ]
     },
     {
+      "id": 104,
       "name": "cubone",
-      "url": "https://pokeapi.co/api/v2/pokemon/104/"
+      "url": "https://pokeapi.co/api/v2/pokemon/104/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "ground"
+          }
+        }
+      ]
     },
     {
+      "id": 105,
       "name": "marowak",
-      "url": "https://pokeapi.co/api/v2/pokemon/105/"
+      "url": "https://pokeapi.co/api/v2/pokemon/105/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "ground"
+          }
+        }
+      ]
     },
     {
+      "id": 106,
       "name": "hitmonlee",
-      "url": "https://pokeapi.co/api/v2/pokemon/106/"
+      "url": "https://pokeapi.co/api/v2/pokemon/106/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "fighting"
+          }
+        }
+      ]
     },
     {
+      "id": 107,
       "name": "hitmonchan",
-      "url": "https://pokeapi.co/api/v2/pokemon/107/"
+      "url": "https://pokeapi.co/api/v2/pokemon/107/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "fighting"
+          }
+        }
+      ]
     },
     {
+      "id": 108,
       "name": "lickitung",
-      "url": "https://pokeapi.co/api/v2/pokemon/108/"
+      "url": "https://pokeapi.co/api/v2/pokemon/108/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "normal"
+          }
+        }
+      ]
     },
     {
+      "id": 109,
       "name": "koffing",
-      "url": "https://pokeapi.co/api/v2/pokemon/109/"
+      "url": "https://pokeapi.co/api/v2/pokemon/109/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "poison"
+          }
+        }
+      ]
     },
     {
+      "id": 110,
       "name": "weezing",
-      "url": "https://pokeapi.co/api/v2/pokemon/110/"
+      "url": "https://pokeapi.co/api/v2/pokemon/110/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "poison"
+          }
+        }
+      ]
     },
     {
+      "id": 111,
       "name": "rhyhorn",
-      "url": "https://pokeapi.co/api/v2/pokemon/111/"
+      "url": "https://pokeapi.co/api/v2/pokemon/111/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "ground"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "rock"
+          }
+        }
+      ]
     },
     {
+      "id": 112,
       "name": "rhydon",
-      "url": "https://pokeapi.co/api/v2/pokemon/112/"
+      "url": "https://pokeapi.co/api/v2/pokemon/112/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "ground"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "rock"
+          }
+        }
+      ]
     },
     {
+      "id": 113,
       "name": "chansey",
-      "url": "https://pokeapi.co/api/v2/pokemon/113/"
+      "url": "https://pokeapi.co/api/v2/pokemon/113/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "normal"
+          }
+        }
+      ]
     },
     {
+      "id": 114,
       "name": "tangela",
-      "url": "https://pokeapi.co/api/v2/pokemon/114/"
+      "url": "https://pokeapi.co/api/v2/pokemon/114/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "grass"
+          }
+        }
+      ]
     },
     {
+      "id": 115,
       "name": "kangaskhan",
-      "url": "https://pokeapi.co/api/v2/pokemon/115/"
+      "url": "https://pokeapi.co/api/v2/pokemon/115/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "normal"
+          }
+        }
+      ]
     },
     {
+      "id": 116,
       "name": "horsea",
-      "url": "https://pokeapi.co/api/v2/pokemon/116/"
+      "url": "https://pokeapi.co/api/v2/pokemon/116/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "water"
+          }
+        }
+      ]
     },
     {
+      "id": 117,
       "name": "seadra",
-      "url": "https://pokeapi.co/api/v2/pokemon/117/"
+      "url": "https://pokeapi.co/api/v2/pokemon/117/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "water"
+          }
+        }
+      ]
     },
     {
+      "id": 118,
       "name": "goldeen",
-      "url": "https://pokeapi.co/api/v2/pokemon/118/"
+      "url": "https://pokeapi.co/api/v2/pokemon/118/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "water"
+          }
+        }
+      ]
     },
     {
+      "id": 119,
       "name": "seaking",
-      "url": "https://pokeapi.co/api/v2/pokemon/119/"
+      "url": "https://pokeapi.co/api/v2/pokemon/119/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "water"
+          }
+        }
+      ]
     },
     {
+      "id": 120,
       "name": "staryu",
-      "url": "https://pokeapi.co/api/v2/pokemon/120/"
+      "url": "https://pokeapi.co/api/v2/pokemon/120/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "water"
+          }
+        }
+      ]
     },
     {
+      "id": 121,
       "name": "starmie",
-      "url": "https://pokeapi.co/api/v2/pokemon/121/"
+      "url": "https://pokeapi.co/api/v2/pokemon/121/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "water"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "psychic"
+          }
+        }
+      ]
     },
     {
+      "id": 122,
       "name": "mr-mime",
-      "url": "https://pokeapi.co/api/v2/pokemon/122/"
+      "url": "https://pokeapi.co/api/v2/pokemon/122/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "psychic"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "fairy"
+          }
+        }
+      ]
     },
     {
+      "id": 123,
       "name": "scyther",
-      "url": "https://pokeapi.co/api/v2/pokemon/123/"
+      "url": "https://pokeapi.co/api/v2/pokemon/123/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "bug"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "flying"
+          }
+        }
+      ]
     },
     {
+      "id": 124,
       "name": "jynx",
-      "url": "https://pokeapi.co/api/v2/pokemon/124/"
+      "url": "https://pokeapi.co/api/v2/pokemon/124/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "ice"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "psychic"
+          }
+        }
+      ]
     },
     {
+      "id": 125,
       "name": "electabuzz",
-      "url": "https://pokeapi.co/api/v2/pokemon/125/"
+      "url": "https://pokeapi.co/api/v2/pokemon/125/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "electric"
+          }
+        }
+      ]
     },
     {
+      "id": 126,
       "name": "magmar",
-      "url": "https://pokeapi.co/api/v2/pokemon/126/"
+      "url": "https://pokeapi.co/api/v2/pokemon/126/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "fire"
+          }
+        }
+      ]
     },
     {
+      "id": 127,
       "name": "pinsir",
-      "url": "https://pokeapi.co/api/v2/pokemon/127/"
+      "url": "https://pokeapi.co/api/v2/pokemon/127/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "bug"
+          }
+        }
+      ]
     },
     {
+      "id": 128,
       "name": "tauros",
-      "url": "https://pokeapi.co/api/v2/pokemon/128/"
+      "url": "https://pokeapi.co/api/v2/pokemon/128/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "normal"
+          }
+        }
+      ]
     },
     {
+      "id": 129,
       "name": "magikarp",
-      "url": "https://pokeapi.co/api/v2/pokemon/129/"
+      "url": "https://pokeapi.co/api/v2/pokemon/129/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "water"
+          }
+        }
+      ]
     },
     {
+      "id": 130,
       "name": "gyarados",
-      "url": "https://pokeapi.co/api/v2/pokemon/130/"
+      "url": "https://pokeapi.co/api/v2/pokemon/130/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "water"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "flying"
+          }
+        }
+      ]
     },
     {
+      "id": 131,
       "name": "lapras",
-      "url": "https://pokeapi.co/api/v2/pokemon/131/"
+      "url": "https://pokeapi.co/api/v2/pokemon/131/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "water"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "ice"
+          }
+        }
+      ]
     },
     {
+      "id": 132,
       "name": "ditto",
-      "url": "https://pokeapi.co/api/v2/pokemon/132/"
+      "url": "https://pokeapi.co/api/v2/pokemon/132/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "normal"
+          }
+        }
+      ]
     },
     {
+      "id": 133,
       "name": "eevee",
-      "url": "https://pokeapi.co/api/v2/pokemon/133/"
+      "url": "https://pokeapi.co/api/v2/pokemon/133/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "normal"
+          }
+        }
+      ]
     },
     {
+      "id": 134,
       "name": "vaporeon",
-      "url": "https://pokeapi.co/api/v2/pokemon/134/"
+      "url": "https://pokeapi.co/api/v2/pokemon/134/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "water"
+          }
+        }
+      ]
     },
     {
+      "id": 135,
       "name": "jolteon",
-      "url": "https://pokeapi.co/api/v2/pokemon/135/"
+      "url": "https://pokeapi.co/api/v2/pokemon/135/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "electric"
+          }
+        }
+      ]
     },
     {
+      "id": 136,
       "name": "flareon",
-      "url": "https://pokeapi.co/api/v2/pokemon/136/"
+      "url": "https://pokeapi.co/api/v2/pokemon/136/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "fire"
+          }
+        }
+      ]
     },
     {
+      "id": 137,
       "name": "porygon",
-      "url": "https://pokeapi.co/api/v2/pokemon/137/"
+      "url": "https://pokeapi.co/api/v2/pokemon/137/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "normal"
+          }
+        }
+      ]
     },
     {
+      "id": 138,
       "name": "omanyte",
-      "url": "https://pokeapi.co/api/v2/pokemon/138/"
+      "url": "https://pokeapi.co/api/v2/pokemon/138/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "rock"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "water"
+          }
+        }
+      ]
     },
     {
+      "id": 139,
       "name": "omastar",
-      "url": "https://pokeapi.co/api/v2/pokemon/139/"
+      "url": "https://pokeapi.co/api/v2/pokemon/139/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "rock"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "water"
+          }
+        }
+      ]
     },
     {
+      "id": 140,
       "name": "kabuto",
-      "url": "https://pokeapi.co/api/v2/pokemon/140/"
+      "url": "https://pokeapi.co/api/v2/pokemon/140/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "rock"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "water"
+          }
+        }
+      ]
     },
     {
+      "id": 141,
       "name": "kabutops",
-      "url": "https://pokeapi.co/api/v2/pokemon/141/"
+      "url": "https://pokeapi.co/api/v2/pokemon/141/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "rock"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "water"
+          }
+        }
+      ]
     },
     {
+      "id": 142,
       "name": "aerodactyl",
-      "url": "https://pokeapi.co/api/v2/pokemon/142/"
+      "url": "https://pokeapi.co/api/v2/pokemon/142/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "rock"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "flying"
+          }
+        }
+      ]
     },
     {
+      "id": 143,
       "name": "snorlax",
-      "url": "https://pokeapi.co/api/v2/pokemon/143/"
+      "url": "https://pokeapi.co/api/v2/pokemon/143/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "normal"
+          }
+        }
+      ]
     },
     {
+      "id": 144,
       "name": "articuno",
-      "url": "https://pokeapi.co/api/v2/pokemon/144/"
+      "url": "https://pokeapi.co/api/v2/pokemon/144/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "ice"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "flying"
+          }
+        }
+      ]
     },
     {
+      "id": 145,
       "name": "zapdos",
-      "url": "https://pokeapi.co/api/v2/pokemon/145/"
+      "url": "https://pokeapi.co/api/v2/pokemon/145/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "electric"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "flying"
+          }
+        }
+      ]
     },
     {
+      "id": 146,
       "name": "moltres",
-      "url": "https://pokeapi.co/api/v2/pokemon/146/"
+      "url": "https://pokeapi.co/api/v2/pokemon/146/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "fire"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "flying"
+          }
+        }
+      ]
     },
     {
+      "id": 147,
       "name": "dratini",
-      "url": "https://pokeapi.co/api/v2/pokemon/147/"
+      "url": "https://pokeapi.co/api/v2/pokemon/147/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "dragon"
+          }
+        }
+      ]
     },
     {
+      "id": 148,
       "name": "dragonair",
-      "url": "https://pokeapi.co/api/v2/pokemon/148/"
+      "url": "https://pokeapi.co/api/v2/pokemon/148/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "dragon"
+          }
+        }
+      ]
     },
     {
+      "id": 149,
       "name": "dragonite",
-      "url": "https://pokeapi.co/api/v2/pokemon/149/"
+      "url": "https://pokeapi.co/api/v2/pokemon/149/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "dragon"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "flying"
+          }
+        }
+      ]
     },
     {
+      "id": 150,
       "name": "mewtwo",
-      "url": "https://pokeapi.co/api/v2/pokemon/150/"
+      "url": "https://pokeapi.co/api/v2/pokemon/150/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "psychic"
+          }
+        }
+      ]
     },
     {
+      "id": 151,
       "name": "mew",
-      "url": "https://pokeapi.co/api/v2/pokemon/151/"
+      "url": "https://pokeapi.co/api/v2/pokemon/151/",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "psychic"
+          }
+        }
+      ]
     }
   ]
 }

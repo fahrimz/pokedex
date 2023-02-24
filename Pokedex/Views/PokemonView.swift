@@ -11,7 +11,6 @@ struct PokemonView: View {
     @EnvironmentObject var vm: ViewModel
     let pokemon: Pokemon
     let dimensions: Double = 140
-    
     var body: some View {
         VStack {
             AsyncImage(url: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(vm.getPokemonIndex(pokemon: pokemon)).png")) { image in
@@ -27,8 +26,16 @@ struct PokemonView: View {
             }.background(.thinMaterial).clipShape(Circle())
             
             Text("\(pokemon.name.capitalized)")
-                .font(.system(size: 16, weight: .regular, design: .monospaced))
+                .font(.system(size: 16, weight: .regular))
                 .padding(.bottom, 20)
+          
+            HStack {
+                TypeButton(pokeType: EPokeType(rawValue: pokemon.types[0].type.name.rawValue))
+
+                if pokemon.types.count > 1 {
+                    TypeButton(pokeType: EPokeType(rawValue: pokemon.types[1].type.name.rawValue))
+                }
+            }
         }
     }
 }
