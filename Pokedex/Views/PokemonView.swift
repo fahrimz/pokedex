@@ -8,12 +8,42 @@
 import SwiftUI
 
 struct PokemonView: View {
+    let artwork = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork"
+    
+    let defaultSprite = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon"
+    
     @EnvironmentObject var vm: ViewModel
     let pokemon: Pokemon
-    let dimensions: Double = 140
+    let dimensions: Double = 95
     var body: some View {
-        VStack {
-            AsyncImage(url: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(vm.getPokemonIndex(pokemon: pokemon)).png")) { image in
+        ZStack {
+            Image("pokeball_white")
+                .resizable()
+                .frame(width: 100, height: 100)
+                .offset(x: 45, y: 30)
+                .opacity(0.3)
+            
+            VStack(alignment: .leading) {
+                Text("\(pokemon.name.capitalized)")
+                    .font(.system(size: 18, weight: .bold))
+                    .foregroundColor(.white)
+
+                HStack {
+                    VStack(alignment: .leading) {
+                        TypeButton(bg: EPokeType(rawValue: pokemon.types[0].type.name.rawValue), text: pokemon.types[0].type.name.rawValue)
+
+                        if pokemon.types.count > 1 {
+                            TypeButton(bg: EPokeType(rawValue: pokemon.types[0].type.name.rawValue), text: pokemon.types[1].type.name.rawValue)
+                        }
+
+                        Spacer()
+                    }
+
+                    Spacer()
+                }
+            }
+
+            AsyncImage(url: URL(string: "\(artwork)/\(vm.getPokemonIndex(pokemon: pokemon)).png")) { image in
                 if let image = image {
                     image
                         .resizable()
@@ -23,20 +53,12 @@ struct PokemonView: View {
             } placeholder: {
                 ProgressView()
                     .frame(width: dimensions, height: dimensions)
-            }.background(.thinMaterial).clipShape(Circle())
-            
-            Text("\(pokemon.name.capitalized)")
-                .font(.system(size: 16, weight: .regular))
-                .padding(.bottom, 20)
-          
-            HStack {
-                TypeButton(pokeType: EPokeType(rawValue: pokemon.types[0].type.name.rawValue))
-
-                if pokemon.types.count > 1 {
-                    TypeButton(pokeType: EPokeType(rawValue: pokemon.types[1].type.name.rawValue))
-                }
-            }
+            }.offset(x: 40, y: 30)
         }
+        .frame(width: 150, height: 120)
+        .padding(15)
+        .background(Color(pokemon.types[0].type.name.rawValue))
+        .clipShape(RoundedRectangle(cornerRadius: 25))
     }
 }
 

@@ -45,7 +45,7 @@ struct PokeType: Codable {
     let name: EPokeType
 }
 
-enum EPokeType: String, Codable {
+enum EPokeType: String, Codable, CaseIterable {
     case normal
     case fighting
     case flying
