@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct PokemonView: View {
+    @State var opacity: CGFloat = 0.0
+    
     let artwork = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork"
     
     let defaultSprite = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon"
@@ -59,6 +61,12 @@ struct PokemonView: View {
         .padding(15)
         .background(Color(pokemon.types[0].type.name.rawValue))
         .clipShape(RoundedRectangle(cornerRadius: 25))
+        .opacity(opacity)
+        .onAppear {
+            withAnimation(.easeInOut(duration: 1)) {
+                opacity = 1
+            }
+        }
     }
 }
 
