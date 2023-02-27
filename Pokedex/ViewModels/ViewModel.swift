@@ -36,7 +36,7 @@ final class ViewModel: ObservableObject {
     
     func getDetails(pokemon: Pokemon) {
         let id = getPokemonIndex(pokemon: pokemon)
-        self.pokemonDetails = DetailPokemon(id: 0, weight: 0, height: 0)
+        self.pokemonDetails = DetailPokemon(id: 1, name: "bulbasaur", url: "https://pokeapi.co/api/v2/pokemon/1/", weight: 0, height: 0, types: [TypeElement(slot: 1, type: PokeType(name: EPokeType.grass)), TypeElement(slot: 2, type: PokeType(name: EPokeType.poison))])
         
         pokemonManager.getDetailedPokemon(id: id) { data in
             DispatchQueue.main.async {

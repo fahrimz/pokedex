@@ -28,10 +28,14 @@ struct Pokemon: Codable, Identifiable, Equatable {
     static var samplePokemon = Pokemon(id: 1, name: "bulbasaur", url: "https://pokeapi.co/api/v2/pokemon/1/", types: [TypeElement(slot: 1, type: PokeType(name: EPokeType.grass)), TypeElement(slot: 2, type: PokeType(name: EPokeType.poison))])
 }
 
+// MARK: - Detail Pokemon
 struct DetailPokemon: Codable {
     let id: Int
+    let name: String
+    let url: String
     let weight: Int
     let height: Int
+    let types: [TypeElement]
 }
 
 // MARK: - TypeElement
