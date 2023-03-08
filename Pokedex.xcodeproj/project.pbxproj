@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110F7F9529AC8D1D00245BB7 /* SlidingTabView in Frameworks */ = {isa = PBXBuildFile; productRef = 110F7F9429AC8D1D00245BB7 /* SlidingTabView */; };
+		110F7F9829AC910300245BB7 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110F7F9729AC910300245BB7 /* AboutView.swift */; };
+		110F7F9A29AC911D00245BB7 /* StatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110F7F9929AC911D00245BB7 /* StatView.swift */; };
+		110F7F9C29AC912400245BB7 /* EvolutionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110F7F9B29AC912400245BB7 /* EvolutionView.swift */; };
+		110F7F9E29AC913900245BB7 /* MoveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110F7F9D29AC913900245BB7 /* MoveView.swift */; };
+		110F7FA029AC915900245BB7 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110F7F9F29AC915900245BB7 /* Header.swift */; };
+		110F7FA229AC95DF00245BB7 /* SpriteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110F7FA129AC95DF00245BB7 /* SpriteImage.swift */; };
 		113015DC29A8FF9800B5CA27 /* TypeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113015DB29A8FF9800B5CA27 /* TypeButton.swift */; };
 		11A9618629A8A640006F379B /* PokedexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9618529A8A640006F379B /* PokedexApp.swift */; };
 		11A9618829A8A640006F379B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9618729A8A640006F379B /* ContentView.swift */; };
@@ -19,9 +26,17 @@
 		11A961A329A8A7C2006F379B /* PokemonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A961A229A8A7C2006F379B /* PokemonModel.swift */; };
 		11A961A629A8AA68006F379B /* PokemonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A961A529A8AA68006F379B /* PokemonDetailView.swift */; };
 		11A961A829A8ACF7006F379B /* PokemonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A961A729A8ACF7006F379B /* PokemonView.swift */; };
+		11BD694B29B7389200A0A113 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BD694A29B7389200A0A113 /* ItemView.swift */; };
+		11BD694D29B7406200A0A113 /* StatItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BD694C29B7406200A0A113 /* StatItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		110F7F9729AC910300245BB7 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		110F7F9929AC911D00245BB7 /* StatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatView.swift; sourceTree = "<group>"; };
+		110F7F9B29AC912400245BB7 /* EvolutionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvolutionView.swift; sourceTree = "<group>"; };
+		110F7F9D29AC913900245BB7 /* MoveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveView.swift; sourceTree = "<group>"; };
+		110F7F9F29AC915900245BB7 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		110F7FA129AC95DF00245BB7 /* SpriteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteImage.swift; sourceTree = "<group>"; };
 		113015DB29A8FF9800B5CA27 /* TypeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = TypeButton.swift; sourceTree = "<group>"; };
 		11A9618229A8A640006F379B /* Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11A9618529A8A640006F379B /* PokedexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexApp.swift; sourceTree = "<group>"; };
@@ -35,6 +50,8 @@
 		11A961A229A8A7C2006F379B /* PokemonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonModel.swift; sourceTree = "<group>"; };
 		11A961A529A8AA68006F379B /* PokemonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailView.swift; sourceTree = "<group>"; };
 		11A961A729A8ACF7006F379B /* PokemonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonView.swift; sourceTree = "<group>"; };
+		11BD694A29B7389200A0A113 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		11BD694C29B7406200A0A113 /* StatItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,12 +59,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				110F7F9529AC8D1D00245BB7 /* SlidingTabView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		110F7F9629AC90E800245BB7 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				110F7F9729AC910300245BB7 /* AboutView.swift */,
+				110F7F9929AC911D00245BB7 /* StatView.swift */,
+				110F7F9B29AC912400245BB7 /* EvolutionView.swift */,
+				110F7F9D29AC913900245BB7 /* MoveView.swift */,
+				110F7F9F29AC915900245BB7 /* Header.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		11A9617929A8A640006F379B = {
 			isa = PBXGroup;
 			children = (
@@ -131,10 +161,14 @@
 		11A961A429A8A9D5006F379B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				110F7F9629AC90E800245BB7 /* Detail */,
 				11A9618729A8A640006F379B /* ContentView.swift */,
 				11A961A529A8AA68006F379B /* PokemonDetailView.swift */,
 				11A961A729A8ACF7006F379B /* PokemonView.swift */,
 				113015DB29A8FF9800B5CA27 /* TypeButton.swift */,
+				110F7FA129AC95DF00245BB7 /* SpriteImage.swift */,
+				11BD694A29B7389200A0A113 /* ItemView.swift */,
+				11BD694C29B7406200A0A113 /* StatItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -155,6 +189,9 @@
 			dependencies = (
 			);
 			name = Pokedex;
+			packageProductDependencies = (
+				110F7F9429AC8D1D00245BB7 /* SlidingTabView */,
+			);
 			productName = Pokedex;
 			productReference = 11A9618229A8A640006F379B /* Pokedex.app */;
 			productType = "com.apple.product-type.application";
@@ -183,6 +220,9 @@
 				Base,
 			);
 			mainGroup = 11A9617929A8A640006F379B;
+			packageReferences = (
+				110F7F9329AC8D1D00245BB7 /* XCRemoteSwiftPackageReference "SlidingTabView" */,
+			);
 			productRefGroup = 11A9618329A8A640006F379B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -210,14 +250,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				110F7F9A29AC911D00245BB7 /* StatView.swift in Sources */,
+				11BD694D29B7406200A0A113 /* StatItemView.swift in Sources */,
 				11A961A829A8ACF7006F379B /* PokemonView.swift in Sources */,
 				11A9618829A8A640006F379B /* ContentView.swift in Sources */,
+				11BD694B29B7389200A0A113 /* ItemView.swift in Sources */,
+				110F7F9C29AC912400245BB7 /* EvolutionView.swift in Sources */,
 				113015DC29A8FF9800B5CA27 /* TypeButton.swift in Sources */,
 				11A961A329A8A7C2006F379B /* PokemonModel.swift in Sources */,
+				110F7F9829AC910300245BB7 /* AboutView.swift in Sources */,
 				11A9619929A8A76F006F379B /* ViewModel.swift in Sources */,
 				11A961A129A8A7BB006F379B /* PokemonManagers.swift in Sources */,
 				11A9618629A8A640006F379B /* PokedexApp.swift in Sources */,
+				110F7FA029AC915900245BB7 /* Header.swift in Sources */,
+				110F7FA229AC95DF00245BB7 /* SpriteImage.swift in Sources */,
 				11A961A629A8AA68006F379B /* PokemonDetailView.swift in Sources */,
+				110F7F9E29AC913900245BB7 /* MoveView.swift in Sources */,
 				11A9619F29A8A7B1006F379B /* Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +467,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		110F7F9329AC8D1D00245BB7 /* XCRemoteSwiftPackageReference "SlidingTabView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/QuynhNguyen/SlidingTabView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		110F7F9429AC8D1D00245BB7 /* SlidingTabView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 110F7F9329AC8D1D00245BB7 /* XCRemoteSwiftPackageReference "SlidingTabView" */;
+			productName = SlidingTabView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 11A9617A29A8A640006F379B /* Project object */;
 }

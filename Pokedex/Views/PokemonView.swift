@@ -45,17 +45,7 @@ struct PokemonView: View {
                 }
             }
 
-            AsyncImage(url: URL(string: "\(artwork)/\(vm.getPokemonIndex(pokemon: pokemon)).png")) { image in
-                if let image = image {
-                    image
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: dimensions, height: dimensions)
-                }
-            } placeholder: {
-                ProgressView()
-                    .frame(width: dimensions, height: dimensions)
-            }.offset(x: 40, y: 30)
+            SpriteImage(pokeId: vm.getPokemonIndex(pokemon: pokemon), size: dimensions).offset(x: 40, y: 30)
         }
         .frame(width: 150, height: 120)
         .padding(15)

@@ -36,13 +36,62 @@ final class ViewModel: ObservableObject {
     
     func getDetails(pokemon: Pokemon) {
         let id = getPokemonIndex(pokemon: pokemon)
-        self.pokemonDetails = DetailPokemon(id: 1, name: "bulbasaur", url: "https://pokeapi.co/api/v2/pokemon/1/", weight: 0, height: 0, types: [TypeElement(slot: 1, type: PokeType(name: EPokeType.grass)), TypeElement(slot: 2, type: PokeType(name: EPokeType.poison))])
+        self.pokemonDetails = DetailPokemon(
+            id: 1,
+            name: "bulbasaur",
+            weight: 0,
+            height: 0,
+            types: [
+                TypeElement(slot: 1, type: PokeType(name: EPokeType.grass)),
+                TypeElement(slot: 2, type: PokeType(name: EPokeType.poison))
+            ],
+            abilities: [
+                Ability(ability: AbilityName(name: "Overgrow")),
+                Ability(ability: AbilityName(name: "Chlorophyl"))
+            ],
+            base_experience: 60,
+            stats: [
+                Stat(base_stat: 45, effort: 0, stat: StatName(name: "hp")),
+                Stat(base_stat: 49, effort: 0, stat: StatName(name: "attack")),
+                Stat(base_stat: 49, effort: 0, stat: StatName(name: "defense")),
+                Stat(base_stat: 65, effort: 1, stat: StatName(name: "special-attack")),
+                Stat(base_stat: 65, effort: 0, stat: StatName(name: "special-defense")),
+                Stat(base_stat: 45, effort: 0, stat: StatName(name: "speed")),
+            ],
+            moves: [
+                Move(move: MoveName(name: "vine-whip")),
+                Move(move: MoveName(name: "headbutt")),
+            ]
+        )
         
         pokemonManager.getDetailedPokemon(id: id) { data in
             DispatchQueue.main.async {
                 self.pokemonDetails = data
             }
         }
+    }
+    
+    func getMoves() -> [String] {
+        let moves = self.pokemonDetails?.moves ?? []
+        return moves.map { $0.move.name.capitalized.replacingOccurrences(of: "-", with: " ") }
+    }
+    
+    func getEVYields() -> String {
+        let stats = self.pokemonDetails?.stats.filter({ $0.effort > 0 }) ?? []
+        let yielded = stats.map {
+            let text = $0.stat.name.replacingOccurrences(of: "special-attack", with: "special attack").replacingOccurrences(of: "special-defense", with: "special defense").capitalized
+            return "\($0.effort) \(text)"
+        }
+        
+        return yielded.joined(separator: ", ")
+    }
+    
+    func getAbilities() -> String {
+        guard let abilities = self.pokemonDetails?.abilities else {
+            return "?"
+        }
+
+        return abilities.map({ $0.ability.name.replacingOccurrences(of: "-", with: " ").capitalized }).joined(separator: ", ")
     }
     
     func formatHW(value: Int) -> String {

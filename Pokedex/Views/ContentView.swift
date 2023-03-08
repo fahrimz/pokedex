@@ -28,7 +28,7 @@ struct ContentView: View {
                             ForEach(vm.filterPokemon) { pokemon in
                                 NavigationLink(destination: PokemonDetailView(pokemon: pokemon)) {
                                     PokemonView(pokemon: pokemon)
-                                }.foregroundColor(.white).navigationBarBackButtonHidden()
+                                }.foregroundColor(.white)
                             }
                         }
                         
@@ -51,4 +51,16 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+}
+
+extension View {
+  func readSize(onChange: @escaping (CGSize) -> Void) -> some View {
+    background(
+      GeometryReader { geometryProxy in
+        Color.clear
+          .preference(key: SizePreferenceKey.self, value: geometryProxy.size)
+      }
+    )
+    .onPreferenceChange(SizePreferenceKey.self, perform: onChange)
+  }
 }

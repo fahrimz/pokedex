@@ -32,10 +32,43 @@ struct Pokemon: Codable, Identifiable, Equatable {
 struct DetailPokemon: Codable {
     let id: Int
     let name: String
-    let url: String
+//    let url: String
     let weight: Int
     let height: Int
     let types: [TypeElement]
+    let abilities: [Ability]
+    let base_experience: Int
+    let stats: [Stat]
+    let moves: [Move]
+}
+
+struct Move: Codable {
+    let move: MoveName
+}
+
+struct MoveName: Codable {
+    let name: String
+}
+
+struct Stat: Codable {
+    let base_stat: Int
+    let effort: Int
+    let stat: StatName
+}
+
+struct StatName: Codable {
+    let name: String
+}
+
+struct Ability: Codable {
+    let ability: AbilityName
+//    let is_hidden: String
+//    let slot: Int
+}
+
+struct AbilityName: Codable {
+    let name: String
+//    let url: String
 }
 
 // MARK: - TypeElement
