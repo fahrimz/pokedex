@@ -103,6 +103,8 @@ final class ViewModel: ObservableObject {
     }
     
     func getEvolutionChain(id: Int) {
+        self.evoChain = nil
+        
         pokemonManager.getEvolution(id: id) { data in
             DispatchQueue.main.async {
                 self.evoChain = data

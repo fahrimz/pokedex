@@ -15,25 +15,34 @@ struct SpriteImage: View {
     let defaultSprite = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons"
     
     var body: some View {
-        AsyncImage(url: URL(string: "\(useDefault ? defaultSprite : artwork)/\(pokeId).png")) { image in
-            if let image = image {
+        AsyncImage(url: URL(string: "\(useDefault ? defaultSprite : artwork)/\(pokeId).png")) { phase in
+            if let image = phase.image {
                 image
                     .resizable()
                     .scaledToFit()
                     .frame(width: size, height: size)
+            } else if phase.error != nil {
+                Image(systemName: "questionmark.app.dashed")
+                    .resizable()
+                    .scaledToFit()
+                    .padding(.top)
+                    .padding(.horizontal)
+                    .frame(width: size, height: size)
+            } else {
+                ProgressView()
+                    .frame(width: size, height: size)
             }
-        } placeholder: {
-            ProgressView()
-                .frame(width: size, height: size)
         }
     }
 }
 
 struct SpriteImage_Previews: PreviewProvider {
     static var previews: some View {
-        VStack {
-            SpriteImage(pokeId: 1, size: 150)
+        HStack(alignment: .bottom) {
+            SpriteImage(pokeId: 1, size: 80)
             SpriteImage(pokeId: 1, size: 80, useDefault: true)
+            SpriteImage(pokeId: 900, size: 80, useDefault: true)
+            SpriteImage(pokeId: 1020, size: 80)
         }
     }
 }
