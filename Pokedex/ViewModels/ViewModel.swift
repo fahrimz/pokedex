@@ -103,15 +103,6 @@ final class ViewModel: ObservableObject {
     }
     
     func getEvolutionChain(id: Int) {
-        self.evoChain = EvolutionChain(
-            chain: Chain(evolves_to: [
-                Chain(evolves_to: [
-                    Chain(evolves_to: [], species: Species(name: "venusaur", url: "https://pokeapi.co/api/v2/pokemon-species/3/"))
-                ], species: Species(name: "ivysaur", url: "https://pokeapi.co/api/v2/pokemon-species/2/"))
-            ], species: Species(name: "bulbasaur", url: "https://pokeapi.co/api/v2/pokemon-species/1/")),
-            id: 1
-        )
-        
         pokemonManager.getEvolution(id: id) { data in
             DispatchQueue.main.async {
                 self.evoChain = data
