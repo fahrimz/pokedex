@@ -46,7 +46,7 @@ struct Header: View {
                 
                 Spacer()
                 
-                Text("#\(String(format: "%03d", pokemon.id))")
+                Text(Helper.getFormattedPokeId(id: pokemon.id))
                     .font(.system(size: 20, weight: .bold))
                     .foregroundColor(.white)
             }

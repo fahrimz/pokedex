@@ -38,8 +38,8 @@ final class ViewModel: ObservableObject {
     func getDetails(pokemon: Pokemon) {
         let id = getPokemonIndex(pokemon: pokemon)
         self.pokemonDetails = DetailPokemon1(
-            id: 1,
-            name: "bulbasaur",
+            id: 2,
+            name: "ivysaur",
             weight: 0,
             height: 0,
             types: [
@@ -66,7 +66,7 @@ final class ViewModel: ObservableObject {
         )
         
         self.speciesData = DetailPokemon2(
-            id: 1,
+            id: 2,
             base_happiness: 50,
             capture_rate: 45,
             egg_groups: [
@@ -74,7 +74,9 @@ final class ViewModel: ObservableObject {
                 EggGroup(name: "plant")
             ],
             hatch_counter: 20,
-            growth_rate: GrowthRate(name: "medium-slow")
+            growth_rate: GrowthRate(name: "medium-slow"),
+            evolves_from_species: EvolveFrom(name: "bulbasaur", url: "https://pokeapi.co/api/v2/pokemon-species/1/"),
+            evolution_chain: EvolutionUrl(url: "https://pokeapi.co/api/v2/evolution-chain/1/")
         )
         
         pokemonManager.getDetailedPokemon(id: id) { data in
@@ -161,5 +163,41 @@ final class ViewModel: ObservableObject {
         }
         
         return rate.name.replacingOccurrences(of: "-", with: " ").capitalized
+    }
+    
+    func getPreviousSpeciesName() -> String? {
+        if let name = self.speciesData?.evolves_from_species?.name {
+            return name.capitalized
+        }
+        
+        return nil
+    }
+    
+    func getPreviousSpeciesIndex() -> Int? {
+        if let index = self.speciesData?.evolves_from_species?.url.split(separator: "/").last {
+            return Int(index)
+        }
+        
+        return nil
+    }
+    
+    func havePreviousSpecies() -> Bool {
+        return self.speciesData?.evolves_from_species != nil
+    }
+    
+    func getCurrentPokeId() -> Int? {
+        if let id = self.speciesData?.id {
+            return id
+        }
+        
+        return nil
+    }
+    
+    func getCurrentPokeName() -> String? {
+        if let name = self.pokemonDetails?.name {
+            return name.capitalized
+        }
+        
+        return nil
     }
 }

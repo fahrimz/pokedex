@@ -47,3 +47,9 @@ extension Bundle {
         }.resume()
     }
 }
+
+class Helper {
+    static func getFormattedPokeId(id: Int) -> String {
+        return "#\(String(format: "%03d", id))"
+    }
+}

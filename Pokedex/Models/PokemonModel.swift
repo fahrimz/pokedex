@@ -25,7 +25,7 @@ struct Pokemon: Codable, Identifiable, Equatable {
     let url: String
     let types: [TypeElement]
 
-    static var samplePokemon = Pokemon(id: 1, name: "bulbasaur", url: "https://pokeapi.co/api/v2/pokemon/1/", types: [TypeElement(slot: 1, type: PokeType(name: EPokeType.grass)), TypeElement(slot: 2, type: PokeType(name: EPokeType.poison))])
+    static var samplePokemon = Pokemon(id: 2, name: "ivysaur", url: "https://pokeapi.co/api/v2/pokemon/2/", types: [TypeElement(slot: 1, type: PokeType(name: EPokeType.grass)), TypeElement(slot: 2, type: PokeType(name: EPokeType.poison))])
 }
 
 // MARK: - Detail Pokemon
@@ -50,6 +50,17 @@ struct DetailPokemon2: Codable {
     let egg_groups: [EggGroup]
     let hatch_counter: Int
     let growth_rate: GrowthRate
+    let evolves_from_species: EvolveFrom?
+    let evolution_chain: EvolutionUrl
+}
+
+struct EvolveFrom: Codable {
+    let name: String
+    let url: String
+}
+
+struct EvolutionUrl: Codable {
+    let url: String
 }
 
 struct GrowthRate: Codable {
