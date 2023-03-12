@@ -51,10 +51,10 @@ struct EvolutionTab: View {
             }
             .frame(maxWidth: .infinity)
             .padding()
-        }
-        .onAppear {
-            if let id = vm.getCurrentEvoChainId() {
-                vm.getEvolutionChain(id: id)
+            .onAppear {
+                if let id = vm.getCurrentEvoChainId() {
+                    vm.getEvolutionChain(id: id)
+                }
             }
         }
     }
@@ -72,13 +72,13 @@ struct EvolutionTab_Previews: PreviewProvider {
 struct EvoItem: View {
     let id: Int?
     let name: String?
-    let size: CGFloat = 100
+    let size: CGFloat = 130
     
     var body: some View {
         VStack {
             SpriteImage(pokeId: id ?? 1, size: size)
             Text(Helper.getFormattedPokeId(id: id ?? 1)).font(.system(size: 14)).foregroundColor(.gray)
-            Text(name ?? "?").font(.system(size: 14))
+            Text(name?.capitalized ?? "?").font(.system(size: 14))
         }
     }
 }
