@@ -154,4 +154,12 @@ final class ViewModel: ObservableObject {
         
         return "\(cycle) (around \(step) steps)"
     }
+    
+    func getGrowthRate() -> String {
+        guard let rate = self.speciesData?.growth_rate else {
+            return "?"
+        }
+        
+        return rate.name.replacingOccurrences(of: "-", with: " ").capitalized
+    }
 }

@@ -28,6 +28,7 @@ struct AboutTab: View {
             ItemView(field: "Catch Rate", value: String(speciesData?.capture_rate ?? 0))
             ItemView(field: "Base Friendship", value: String(speciesData?.base_happiness ?? 0))
             ItemView(field: "Base Exp.", value: String(detail?.base_experience ?? 0))
+            ItemView(field: "Growth Rate", value: vm.getGrowthRate())
         }
     }
     
