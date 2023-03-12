@@ -14,62 +14,79 @@ struct PokemonDetailView: View {
     
     @State private var tabIndex = 0
     
+    @Namespace var ns
+    @State var expanded = false
+    
     let pokemon: Pokemon
-
+    
     let dimensions: CGFloat = 230
     let cornerRadius: CGFloat = 20
     
+    var tabView: some View {
+        VStack {
+            SlidingTabView(
+                selection: $tabIndex,
+                tabs: ["About", "Base Stats", "Evolution", "Moves"],
+                font: .system(size: 14),
+                activeAccentColor: .black,
+                selectionBarColor: Color(pokemon.types[0].type.name.rawValue),
+                selectionBarHeight: 2
+            ).padding(.top, 50).padding(.horizontal, 20)
+
+            switch tabIndex {
+            case 0:
+                AboutTab(detail: vm.pokemonDetails, speciesData: vm.speciesData)
+            case 1:
+                StatTab()
+            case 2:
+                EvolutionTab()
+            case 3:
+                MoveTab()
+            default:
+                AboutTab(detail: vm.pokemonDetails, speciesData: vm.speciesData)
+            }
+
+            Spacer()
+        }
+        .frame(maxWidth: .infinity)
+        .background(.white)
+        .padding(.bottom, cornerRadius)
+        .cornerRadius(cornerRadius)
+        .padding(.bottom, -cornerRadius - 50)
+        .offset(y: -50)
+        .gesture(DragGesture().onChanged { value in
+            let scrollDown = value.translation.height > 0
+            withAnimation { expanded = scrollDown ? false : true }
+        })
+    }
+    
     var body: some View {
         GeometryReader { geo in
-            ZStack(alignment: .leading) {
-                Color(pokemon.types[0].type.name.rawValue).ignoresSafeArea()
-                
-                Image("pokeball_white")
-                    .resizable()
-                    .frame(width: 200, height: 200)
-                    .opacity(0.2)
-                    .offset(x: 200, y: -120)
-                
-                VStack {
-                    Header(pokemon: pokemon)
+            if !expanded {
+                ZStack(alignment: .leading) {
+                    Color(pokemon.types[0].type.name.rawValue).ignoresSafeArea()
                     
-                    SpriteImage(pokeId: vm.getPokemonIndex(pokemon: pokemon), size: dimensions).zIndex(1)
+                    Image("pokeball_white")
+                        .resizable()
+                        .frame(width: 200, height: 200)
+                        .opacity(0.2)
+                        .position(x: geo.size.width / 1.3, y: geo.size.height / 2.7)
                     
                     VStack {
-                        SlidingTabView(
-                            selection: $tabIndex,
-                            tabs: ["About", "Base Stats", "Evolution", "Moves"],
-                            font: .system(size: 14),
-                            //                            animation: .easeInOut,
-                            activeAccentColor: .black,
-                            selectionBarColor: Color(pokemon.types[0].type.name.rawValue),
-                            selectionBarHeight: 2
-                        ).padding(.top, 50).padding(.horizontal, 20)
+                        Header(pokemon: pokemon)
                         
-                        switch tabIndex {
-                        case 0:
-                            AboutTab(detail: vm.pokemonDetails, speciesData: vm.speciesData)
-                        case 1:
-                            StatTab()
-                        case 2:
-                            EvolutionTab()
-                        case 3:
-                            MoveTab()
-                        default:
-                            AboutTab(detail: vm.pokemonDetails, speciesData: vm.speciesData)
-                        }
+                        SpriteImage(pokeId: vm.getPokemonIndex(pokemon: pokemon), size: dimensions)
+                            .zIndex(1)
+                        
+                        tabView
+                            .matchedGeometryEffect(id: "tabView", in: ns)
                         
                         Spacer()
                     }
-                    .frame(width: geo.size.width)
-                    .background(.white)
-                    .padding(.bottom, cornerRadius)
-                    .cornerRadius(cornerRadius)
-                    .padding(.bottom, -cornerRadius - 50)
-                    .offset(y: -50)
-                    
-                    Spacer()
                 }
+            } else {
+                tabView
+                    .matchedGeometryEffect(id: "tabView", in: ns)
             }
         }
         .edgesIgnoringSafeArea(.bottom)

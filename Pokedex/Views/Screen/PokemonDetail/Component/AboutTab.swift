@@ -52,17 +52,15 @@ struct AboutTab: View {
     }
     
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 16) {
+        VStack(alignment: .leading, spacing: 16) {
 
-                baseData
-                trainingData
-                breedingData
+            baseData
+            trainingData
+            breedingData
 //                typeDefenseData
 
-                Spacer()
-            }.padding(.horizontal, 24)
-        }
+            Spacer()
+        }.padding(.horizontal, 24)
     }
 }
 
