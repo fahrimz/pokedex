@@ -29,7 +29,7 @@ struct Pokemon: Codable, Identifiable, Equatable {
 }
 
 // MARK: - Detail Pokemon
-struct DetailPokemon: Codable {
+struct DetailPokemon1: Codable {
     let id: Int
     let name: String
 //    let url: String
@@ -40,6 +40,24 @@ struct DetailPokemon: Codable {
     let base_experience: Int
     let stats: [Stat]
     let moves: [Move]
+}
+
+// MARK: - Pokemon Species
+struct DetailPokemon2: Codable {
+    let id: Int
+    let base_happiness: Int
+    let capture_rate: Int
+    let egg_groups: [EggGroup]
+    let hatch_counter: Int
+    let growth_rate: GrowthRate
+}
+
+struct GrowthRate: Codable {
+    let name: String
+}
+
+struct EggGroup: Codable {
+    let name: String
 }
 
 struct Move: Codable {

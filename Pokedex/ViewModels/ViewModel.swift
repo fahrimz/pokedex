@@ -12,7 +12,8 @@ final class ViewModel: ObservableObject {
     private let pokemonManager = PokemonManager()
     
     @Published var pokemonList = [Pokemon]()
-    @Published var pokemonDetails: DetailPokemon?
+    @Published var pokemonDetails: DetailPokemon1?
+    @Published var speciesData: DetailPokemon2?
     @Published var searchText = ""
     
     var filterPokemon: [Pokemon] {
@@ -36,7 +37,7 @@ final class ViewModel: ObservableObject {
     
     func getDetails(pokemon: Pokemon) {
         let id = getPokemonIndex(pokemon: pokemon)
-        self.pokemonDetails = DetailPokemon(
+        self.pokemonDetails = DetailPokemon1(
             id: 1,
             name: "bulbasaur",
             weight: 0,
@@ -64,9 +65,27 @@ final class ViewModel: ObservableObject {
             ]
         )
         
+        self.speciesData = DetailPokemon2(
+            id: 1,
+            base_happiness: 50,
+            capture_rate: 45,
+            egg_groups: [
+                EggGroup(name: "monster"),
+                EggGroup(name: "plant")
+            ],
+            hatch_counter: 20,
+            growth_rate: GrowthRate(name: "medium-slow")
+        )
+        
         pokemonManager.getDetailedPokemon(id: id) { data in
             DispatchQueue.main.async {
                 self.pokemonDetails = data
+            }
+        }
+        
+        pokemonManager.getPokemonSpeciesData(id: id) { data in
+            DispatchQueue.main.async {
+                self.speciesData = data
             }
         }
     }
@@ -116,5 +135,23 @@ final class ViewModel: ObservableObject {
         let inch = Int(ceil(dInch / 100))
         
         return "\(feet)\'\(inch)\""
+    }
+    
+    func getEggGroup() -> String {
+        guard let groups = self.speciesData?.egg_groups else {
+            return "?"
+        }
+        
+        return groups.map { $0.name.capitalized }.joined(separator: ", ")
+    }
+    
+    func getEggCycle() -> String {
+        guard let cycle = self.speciesData?.hatch_counter else {
+            return "?"
+        }
+
+        let step = cycle * 257 // each cycle consist of 257 step in newest generation game
+        
+        return "\(cycle) (around \(step) steps)"
     }
 }

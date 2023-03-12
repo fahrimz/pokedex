@@ -10,6 +10,7 @@ import SwiftUI
 struct AboutTab: View {
     @EnvironmentObject var vm: ViewModel
     let detail: DetailPokemon1?
+    let speciesData: DetailPokemon2?
     
     var baseData: some View {
         Group {
@@ -24,8 +25,8 @@ struct AboutTab: View {
             Text("Training")
                 .padding(.top, 10)
             ItemView(field: "EV Yield", value: vm.getEVYields())
-            ItemView(field: "Catch Rate", value: "TODO")
-            ItemView(field: "Base Friendship", value: "TODO")
+            ItemView(field: "Catch Rate", value: String(speciesData?.capture_rate ?? 0))
+            ItemView(field: "Base Friendship", value: String(speciesData?.base_happiness ?? 0))
             ItemView(field: "Base Exp.", value: String(detail?.base_experience ?? 0))
         }
     }
@@ -34,8 +35,8 @@ struct AboutTab: View {
         Group {
             Text("Breeding")
                 .padding(.top, 10)
-            ItemView(field: "Egg Groups", value: "TODO")
-            ItemView(field: "Egg Cycle", value: "TODO")
+            ItemView(field: "Egg Groups", value: vm.getEggGroup())
+            ItemView(field: "Egg Cycle", value: vm.getEggCycle())
         }
     }
     
@@ -67,6 +68,9 @@ struct AboutTab: View {
 struct AboutTab_Previews: PreviewProvider {
     static var previews: some View {
         let vm = ViewModel()
-        AboutTab(detail: vm.pokemonDetails).environmentObject(vm)
+        AboutTab(
+            detail: vm.pokemonDetails,
+            speciesData: vm.speciesData
+        ).environmentObject(vm)
     }
 }
