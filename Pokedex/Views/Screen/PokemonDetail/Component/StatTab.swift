@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct StatView: View {
+struct StatTab: View {
     @EnvironmentObject var vm: ViewModel
     
     var statData: some View {
@@ -31,6 +31,6 @@ struct StatView: View {
 struct StatView_Previews: PreviewProvider {
     static var previews: some View {
         let vm = ViewModel()
-        StatView().environmentObject(vm)
+        StatTab().environmentObject(vm)
     }
 }

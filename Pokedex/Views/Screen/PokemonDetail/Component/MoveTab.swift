@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MoveView: View {
+struct MoveTab: View {
     @EnvironmentObject var vm: ViewModel
     
     var body: some View {
@@ -22,6 +22,6 @@ struct MoveView: View {
 struct MoveView_Previews: PreviewProvider {
     static var previews: some View {
         let vm = ViewModel()
-        MoveView().environmentObject(vm)
+        MoveTab().environmentObject(vm)
     }
 }

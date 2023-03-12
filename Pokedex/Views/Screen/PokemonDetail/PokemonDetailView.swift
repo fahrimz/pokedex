@@ -48,15 +48,15 @@ struct PokemonDetailView: View {
                         
                         switch tabIndex {
                         case 0:
-                            AboutView(detail: vm.pokemonDetails)
+                            AboutTab(detail: vm.pokemonDetails)
                         case 1:
-                            StatView()
+                            StatTab()
                         case 2:
-                            EvolutionView()
+                            EvolutionTab()
                         case 3:
-                            MoveView()
+                            MoveTab()
                         default:
-                            AboutView(detail: vm.pokemonDetails)
+                            AboutTab(detail: vm.pokemonDetails)
                         }
                         
                         Spacer()

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AboutView: View {
+struct AboutTab: View {
     @EnvironmentObject var vm: ViewModel
     let detail: DetailPokemon?
     
@@ -67,6 +67,6 @@ struct AboutView: View {
 struct AboutView_Previews: PreviewProvider {
     static var previews: some View {
         let vm = ViewModel()
-        AboutView(detail: vm.pokemonDetails).environmentObject(vm)
+        AboutTab(detail: vm.pokemonDetails).environmentObject(vm)
     }
 }

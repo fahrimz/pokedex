@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct EvolutionView: View {
+struct EvolutionTab: View {
     var body: some View {
         Text("Evolution")
     }
@@ -15,6 +15,6 @@ struct EvolutionView: View {
 
 struct Evolution_Previews: PreviewProvider {
     static var previews: some View {
-        EvolutionView()
+        EvolutionTab()
     }
 }
