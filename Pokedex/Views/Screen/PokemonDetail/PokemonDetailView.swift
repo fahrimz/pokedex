@@ -42,7 +42,7 @@ struct PokemonDetailView: View {
                 SpriteImage(pokeId: vm.getPokemonIndex(pokemon: pokemon), size: dimensions)
                     .zIndex(1)
                     .position(x: geo.size.width / 2, y: geo.size.height / 2.6)
-                    .scaleEffect(expanded ? 0 : 1)
+                    .scaleEffect(expanded ? 0.1 : 1) // using 0.1 to avoid "ignoring singular matrix..." console warning
                     .opacity(expanded ? 0 : 1)
                     .animation(expanded ? .easeIn.speed(3) : .spring().delay(0.3), value: expanded)
                 
