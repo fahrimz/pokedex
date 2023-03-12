@@ -1,13 +1,13 @@
 //
-//  ContentView.swift
+//  MainView.swift
 //  Pokedex
 //
-//  Created by Fahri Zulkarnaen on 24/02/23.
+//  Created by Fahri Zulkarnaen on 12/03/23.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainView: View {
     @StateObject var vm = ViewModel()
     
     private var cols: Array<GridItem> { Array(repeating: GridItem(spacing: 0), count: 2) }
@@ -47,9 +47,9 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainView()
     }
 }
 
