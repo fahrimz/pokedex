@@ -10,11 +10,12 @@ import SwiftUI
 struct SpriteImage: View {
     let pokeId: Int
     let size: CGFloat
+    var useDefault = false
     let artwork = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork"
-    let defaultSprite = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon"
+    let defaultSprite = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons"
     
     var body: some View {
-        AsyncImage(url: URL(string: "\(artwork)/\(pokeId).png")) { image in
+        AsyncImage(url: URL(string: "\(useDefault ? defaultSprite : artwork)/\(pokeId).png")) { image in
             if let image = image {
                 image
                     .resizable()
@@ -30,6 +31,9 @@ struct SpriteImage: View {
 
 struct SpriteImage_Previews: PreviewProvider {
     static var previews: some View {
-        SpriteImage(pokeId: 1, size: 150)
+        VStack {
+            SpriteImage(pokeId: 1, size: 150)
+            SpriteImage(pokeId: 1, size: 80, useDefault: true)
+        }
     }
 }
