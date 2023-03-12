@@ -1,5 +1,5 @@
 //
-//  MoveView.swift
+//  MoveTab.swift
 //  Pokedex
 //
 //  Created by Fahri Zulkarnaen on 27/02/23.
@@ -19,7 +19,7 @@ struct MoveTab: View {
     }
 }
 
-struct MoveView_Previews: PreviewProvider {
+struct MoveTab_Previews: PreviewProvider {
     static var previews: some View {
         let vm = ViewModel()
         MoveTab().environmentObject(vm)

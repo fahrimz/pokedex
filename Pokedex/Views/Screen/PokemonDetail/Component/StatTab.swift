@@ -1,5 +1,5 @@
 //
-//  StatView.swift
+//  StatTab.swift
 //  Pokedex
 //
 //  Created by Fahri Zulkarnaen on 27/02/23.
@@ -28,7 +28,7 @@ struct StatTab: View {
     }
 }
 
-struct StatView_Previews: PreviewProvider {
+struct StatTab_Previews: PreviewProvider {
     static var previews: some View {
         let vm = ViewModel()
         StatTab().environmentObject(vm)

@@ -13,7 +13,7 @@ struct EvolutionTab: View {
     }
 }
 
-struct Evolution_Previews: PreviewProvider {
+struct EvolutionTab_Previews: PreviewProvider {
     static var previews: some View {
         EvolutionTab()
     }

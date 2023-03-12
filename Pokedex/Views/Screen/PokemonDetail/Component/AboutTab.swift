@@ -1,5 +1,5 @@
 //
-//  AboutView.swift
+//  AboutTab.swift
 //  Pokedex
 //
 //  Created by Fahri Zulkarnaen on 27/02/23.
@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AboutTab: View {
     @EnvironmentObject var vm: ViewModel
-    let detail: DetailPokemon?
+    let detail: DetailPokemon1?
     
     var baseData: some View {
         Group {
@@ -64,7 +64,7 @@ struct AboutTab: View {
     }
 }
 
-struct AboutView_Previews: PreviewProvider {
+struct AboutTab_Previews: PreviewProvider {
     static var previews: some View {
         let vm = ViewModel()
         AboutTab(detail: vm.pokemonDetails).environmentObject(vm)
