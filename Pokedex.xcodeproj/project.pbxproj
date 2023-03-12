@@ -28,6 +28,7 @@
 		11BD694B29B7389200A0A113 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BD694A29B7389200A0A113 /* ItemView.swift */; };
 		11BD694D29B7406200A0A113 /* StatItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BD694C29B7406200A0A113 /* StatItemView.swift */; };
 		11C420E329BD77E8006F7DC6 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C420E229BD77E8006F7DC6 /* MainView.swift */; };
+		11C420E629BDAC34006F7DC6 /* EvolutionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C420E529BDAC34006F7DC6 /* EvolutionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		11BD694A29B7389200A0A113 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		11BD694C29B7406200A0A113 /* StatItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatItemView.swift; sourceTree = "<group>"; };
 		11C420E229BD77E8006F7DC6 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		11C420E529BDAC34006F7DC6 /* EvolutionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvolutionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				11A961A229A8A7C2006F379B /* PokemonModel.swift */,
+				11C420E529BDAC34006F7DC6 /* EvolutionModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				11A961A129A8A7BB006F379B /* PokemonManagers.swift in Sources */,
 				11A9618629A8A640006F379B /* PokedexApp.swift in Sources */,
 				110F7FA029AC915900245BB7 /* Header.swift in Sources */,
+				11C420E629BDAC34006F7DC6 /* EvolutionModel.swift in Sources */,
 				110F7FA229AC95DF00245BB7 /* SpriteImage.swift in Sources */,
 				11A961A629A8AA68006F379B /* PokemonDetailView.swift in Sources */,
 				110F7F9E29AC913900245BB7 /* MoveTab.swift in Sources */,

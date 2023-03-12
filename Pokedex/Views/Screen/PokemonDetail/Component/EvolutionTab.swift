@@ -11,17 +11,52 @@ struct EvolutionTab: View {
     @EnvironmentObject var vm: ViewModel
     
     var body: some View {
-        VStack {
-            if vm.havePreviousSpecies() {
-                HStack {
-                    EvoItem(id: vm.getPreviousSpeciesIndex(), name: vm.getPreviousSpeciesName())
-                    Image(systemName: "arrow.right").padding()
-                    EvoItem(id: vm.getCurrentPokeId(), name: vm.getCurrentPokeName())
+        ScrollView {
+            VStack {
+                if vm.haveEvolution() {
+                    VStack {
+                        if vm.evoChain != nil {
+                            EvoItem(id: Helper.getIdFromUrl(url: vm.evoChain!.chain.species.url), name: vm.evoChain!.chain.species.name)
+                            
+                            if ((vm.evoChain?.chain.evolves_to.count ?? 0) > 0) {
+                                Image(systemName: "arrow.down").padding()
+                                
+                                HStack {
+                                    ForEach(vm.evoChain?.chain.evolves_to ?? [], id: \.species.name) { lvl2 in
+                                        VStack {
+                                            // second level
+                                            EvoItem(id: Helper.getIdFromUrl(url: lvl2.species.url), name: lvl2.species.name)
+                                            
+                                            if lvl2.evolves_to.count > 0 {
+                                                Image(systemName: "arrow.down").padding()
+                                                
+                                                // third level
+                                                HStack {
+                                                    ForEach(lvl2.evolves_to, id: \.species.name) { lvl3 in
+                                                        EvoItem(id: Helper.getIdFromUrl(url: lvl3.species.url), name: lvl3.species.name)
+                                                    }
+                                                }
+                                            }
+                                            
+                                            Spacer()
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } else {
+                    Text("\(vm.getCurrentPokeName() ?? "This pokemon") does not evolve.").font(.system(size: 14)).foregroundColor(.gray)
                 }
-            } else {
-                Text("This pokemon does not have previous evolution.").font(.system(size: 14)).foregroundColor(.gray)
             }
-        }.frame(maxHeight: .infinity)
+            .frame(maxWidth: .infinity)
+            .padding()
+        }
+        .onAppear {
+            if let id = vm.getCurrentEvoChainId() {
+                vm.getEvolutionChain(id: id)
+            }
+        }
     }
 }
 

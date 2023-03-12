@@ -14,6 +14,7 @@ final class ViewModel: ObservableObject {
     @Published var pokemonList = [Pokemon]()
     @Published var pokemonDetails: DetailPokemon1?
     @Published var speciesData: DetailPokemon2?
+    @Published var evoChain: EvolutionChain?
     @Published var searchText = ""
     
     var filterPokemon: [Pokemon] {
@@ -25,6 +26,15 @@ final class ViewModel: ObservableObject {
     init() {
         self.pokemonList = pokemonManager.getPokemon()
         
+        // preview only
+        self.evoChain = EvolutionChain(
+            chain: Chain(evolves_to: [
+                Chain(evolves_to: [
+                    Chain(evolves_to: [], species: Species(name: "venusaur", url: "https://pokeapi.co/api/v2/pokemon-species/3/"))
+                ], species: Species(name: "ivysaur", url: "https://pokeapi.co/api/v2/pokemon-species/2/"))
+            ], species: Species(name: "bulbasaur", url: "https://pokeapi.co/api/v2/pokemon-species/1/")),
+            id: 1
+        )
     }
     
     func getPokemonIndex(pokemon: Pokemon) -> Int {
@@ -88,6 +98,23 @@ final class ViewModel: ObservableObject {
         pokemonManager.getPokemonSpeciesData(id: id) { data in
             DispatchQueue.main.async {
                 self.speciesData = data
+            }
+        }
+    }
+    
+    func getEvolutionChain(id: Int) {
+        self.evoChain = EvolutionChain(
+            chain: Chain(evolves_to: [
+                Chain(evolves_to: [
+                    Chain(evolves_to: [], species: Species(name: "venusaur", url: "https://pokeapi.co/api/v2/pokemon-species/3/"))
+                ], species: Species(name: "ivysaur", url: "https://pokeapi.co/api/v2/pokemon-species/2/"))
+            ], species: Species(name: "bulbasaur", url: "https://pokeapi.co/api/v2/pokemon-species/1/")),
+            id: 1
+        )
+        
+        pokemonManager.getEvolution(id: id) { data in
+            DispatchQueue.main.async {
+                self.evoChain = data
             }
         }
     }
@@ -174,15 +201,15 @@ final class ViewModel: ObservableObject {
     }
     
     func getPreviousSpeciesIndex() -> Int? {
-        if let index = self.speciesData?.evolves_from_species?.url.split(separator: "/").last {
-            return Int(index)
-        }
-        
-        return nil
+        return Helper.getIdFromUrl(url: self.speciesData?.evolves_from_species?.url)
     }
     
     func havePreviousSpecies() -> Bool {
         return self.speciesData?.evolves_from_species != nil
+    }
+    
+    func haveEvolution() -> Bool {
+        return (self.evoChain?.chain.evolves_to.count ?? 0) > 0
     }
     
     func getCurrentPokeId() -> Int? {
@@ -199,5 +226,9 @@ final class ViewModel: ObservableObject {
         }
         
         return nil
+    }
+    
+    func getCurrentEvoChainId() -> Int? {
+        return Helper.getIdFromUrl(url: self.speciesData?.evolution_chain.url)
     }
 }

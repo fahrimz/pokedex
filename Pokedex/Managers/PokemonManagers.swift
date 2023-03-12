@@ -30,4 +30,12 @@ class PokemonManager {
             print(error)
         }
     }
+    
+    func getEvolution(id: Int, _ completion: @escaping(EvolutionChain) -> ()) {
+        Bundle.main.fetchData(url: "https://pokeapi.co/api/v2/evolution-chain/\(id)", model: EvolutionChain.self) { data in
+            completion(data)
+        } failure: { error in
+            print(error)
+        }
+    }
 }

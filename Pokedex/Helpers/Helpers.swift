@@ -48,8 +48,27 @@ extension Bundle {
     }
 }
 
+extension Encodable {
+    var prettyJSON: String {
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+        guard let data = try? encoder.encode(self),
+            let output = String(data: data, encoding: .utf8)
+            else { return "Error converting \(self) to JSON string" }
+        return output
+    }
+}
+
 class Helper {
     static func getFormattedPokeId(id: Int) -> String {
         return "#\(String(format: "%03d", id))"
+    }
+    
+    static func getIdFromUrl(url: String?) -> Int? {
+        if let id = url?.split(separator: "/").last {
+            return Int(id)
+        }
+        
+        return nil
     }
 }
