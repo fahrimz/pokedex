@@ -22,44 +22,6 @@ struct PokemonDetailView: View {
     let dimensions: CGFloat = 230
     let cornerRadius: CGFloat = 20
     
-    var tabView: some View {
-        VStack {
-            SlidingTabView(
-                selection: $tabIndex,
-                tabs: ["About", "Base Stats", "Evolution", "Moves"],
-                font: .system(size: 14),
-                activeAccentColor: .black,
-                selectionBarColor: Color(pokemon.types[0].type.name.rawValue),
-                selectionBarHeight: 2
-            ).padding(.top, 50).padding(.horizontal, 20)
-            
-            switch tabIndex {
-            case 0:
-                AboutTab(detail: vm.pokemonDetails, speciesData: vm.speciesData)
-            case 1:
-                StatTab()
-            case 2:
-                EvolutionTab()
-            case 3:
-                MoveTab()
-            default:
-                AboutTab(detail: vm.pokemonDetails, speciesData: vm.speciesData)
-            }
-            
-            Spacer()
-        }
-        .frame(maxWidth: .infinity)
-        .background(.white)
-        .padding(.bottom, cornerRadius)
-        .cornerRadius(cornerRadius)
-        .padding(.bottom, -cornerRadius - 50)
-        .offset(y: -50)
-        .gesture(DragGesture().onChanged { value in
-            let scrollDown = value.translation.height > 0
-            withAnimation { expanded = scrollDown ? false : true }
-        })
-    }
-    
     var body: some View {
         GeometryReader { geo in
             ZStack(alignment: .leading) {
@@ -76,18 +38,13 @@ struct PokemonDetailView: View {
                     
                     Spacer()
                 }
-                
-                if !expanded {
-                    SpriteImage(pokeId: vm.getPokemonIndex(pokemon: pokemon), size: dimensions)
-                        .zIndex(1)
-                        .position(x: geo.size.width / 2, y: geo.size.height / 2.6)
-                        .matchedGeometryEffect(id: "sprite", in: ns)
-                } else {
-                    SpriteImage(pokeId: vm.getPokemonIndex(pokemon: pokemon), size: dimensions)
-                        .zIndex(0)
-                        .position(x: -dimensions, y: -dimensions)
-                        .matchedGeometryEffect(id: "sprite", in: ns)
-                }
+
+                SpriteImage(pokeId: vm.getPokemonIndex(pokemon: pokemon), size: dimensions)
+                    .zIndex(1)
+                    .position(x: geo.size.width / 2, y: geo.size.height / 2.6)
+                    .scaleEffect(expanded ? 0 : 1)
+                    .opacity(expanded ? 0 : 1)
+                    .animation(expanded ? .easeIn.speed(3) : .spring().delay(0.3), value: expanded)
                 
                 VStack {
                     SlidingTabView(
