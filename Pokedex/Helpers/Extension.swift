@@ -5,7 +5,7 @@
 //  Created by Fahri Zulkarnaen on 24/02/23.
 //
 
-import Foundation
+import SwiftUI
 
 extension Bundle {
     func decode<T: Decodable>(file: String) -> T {
@@ -71,56 +71,14 @@ extension UserDefaults {
     }
 }
 
-class Helper {
-    static func getFormattedPokeId(id: Int) -> String {
-        return "#\(String(format: "%03d", id))"
-    }
-    
-    static func getIdFromUrl(url: String?) -> Int? {
-        if let id = url?.split(separator: "/").last {
-            return Int(id)
-        }
-        
-        return nil
-    }
-}
-
-class FavHelper {
-    static func getFavPokemon() -> [Pokemon] {
-        return UserDefaults.standard.pokemons
-    }
-    
-    static func setFavPokemonArr(pokemons: [Pokemon]) {
-        UserDefaults.standard.pokemons = pokemons
-    }
-    
-    static func isPokemonAFav(id: Int) -> Bool {
-        let mons = getFavPokemon()
-        return mons.filter { $0.id == id }.count > 0
-    }
-    
-    private static func addFavPokemon(pokemon: Pokemon) {
-        var mons = getFavPokemon()
-        
-        if !isPokemonAFav(id: pokemon.id) {
-            mons.append(pokemon)
-            setFavPokemonArr(pokemons: mons)
-        }
-    }
-    
-    private static func removeFavPokemon(id: Int) {
-        var mons = getFavPokemon()
-        if let index = mons.firstIndex(where: { $0.id == id }) {
-            mons.remove(at: index)
-            setFavPokemonArr(pokemons: mons)
-        }
-    }
-    
-    static func toggleFavPokemon(pokemon: Pokemon) {
-        if isPokemonAFav(id: pokemon.id) {
-            removeFavPokemon(id: pokemon.id)
-        } else {
-            addFavPokemon(pokemon: pokemon)
-        }
+extension View {
+    func readSize(onChange: @escaping (CGSize) -> Void) -> some View {
+        background(
+            GeometryReader { geometryProxy in
+                Color.clear
+                    .preference(key: SizePreferenceKey.self, value: geometryProxy.size)
+            }
+        )
+        .onPreferenceChange(SizePreferenceKey.self, perform: onChange)
     }
 }

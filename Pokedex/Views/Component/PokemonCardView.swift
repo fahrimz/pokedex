@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct PokemonView: View {
+    @EnvironmentObject var vm: ViewModel
     @State var opacity: CGFloat = 0.0
     
-    @EnvironmentObject var vm: ViewModel
     let pokemon: Pokemon
     let dimensions: Double = 95
+    
     var body: some View {
         ZStack {
             Image("pokeball_white")
@@ -25,23 +26,24 @@ struct PokemonView: View {
                 Text("\(pokemon.name.capitalized)")
                     .font(.system(size: 18, weight: .bold))
                     .foregroundColor(.white)
-
+                
                 HStack {
                     VStack(alignment: .leading) {
                         TypeButton(bg: EPokeType(rawValue: pokemon.types[0].type.name.rawValue), text: pokemon.types[0].type.name.rawValue)
-
+                        
                         if pokemon.types.count > 1 {
                             TypeButton(bg: EPokeType(rawValue: pokemon.types[0].type.name.rawValue), text: pokemon.types[1].type.name.rawValue)
                         }
-
+                        
                         Spacer()
                     }
-
+                    
                     Spacer()
                 }
             }
-
-            SpriteImage(pokeId: vm.getPokemonIndex(pokemon: pokemon), size: dimensions).offset(x: 40, y: 30)
+            
+            SpriteImage(pokeId: vm.getPokemonIndex(pokemon: pokemon), size: dimensions)
+                .offset(x: 40, y: 30)
         }
         .frame(width: 150, height: 120)
         .padding(15)

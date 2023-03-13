@@ -11,14 +11,10 @@ import SlidingTabView
 struct PokemonDetailView: View {
     @EnvironmentObject var vm: ViewModel
     @Environment(\.dismiss) private var dismiss
-    
     @State private var tabIndex = 0
-    
-    @Namespace var ns
     @State var expanded = false
     
     let pokemon: Pokemon
-    
     let dimensions: CGFloat = 230
     let cornerRadius: CGFloat = 20
     
@@ -38,7 +34,7 @@ struct PokemonDetailView: View {
                     
                     Spacer()
                 }
-
+                
                 SpriteImage(pokeId: vm.getPokemonIndex(pokemon: pokemon), size: dimensions)
                     .zIndex(1)
                     .position(x: geo.size.width / 2, y: geo.size.height / 2.6)

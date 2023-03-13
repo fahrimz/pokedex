@@ -51,7 +51,7 @@ struct Header: View {
                 
                 Spacer()
                 
-                Text(Helper.getFormattedPokeId(id: pokemon.id))
+                Text(TextHelper.getFormattedPokeId(id: pokemon.id))
                     .font(.system(size: 20, weight: .bold))
                     .foregroundColor(.white)
             }

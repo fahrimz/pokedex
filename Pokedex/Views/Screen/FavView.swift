@@ -20,10 +20,11 @@ struct FavView: View {
                 
                 Text("Favorite")
                     .font(.system(size: 24))
+                    .padding(.leading)
                 
                 Spacer()
             }
-            .padding(.top, 20)
+            .padding(.vertical, 20)
             .padding(.horizontal, 36)
             
             if pokemons.count > 0 {
@@ -68,7 +69,7 @@ struct FavCard: View {
         NavigationLink(destination: PokemonDetailView(pokemon: pokemon)) {
             HStack {
                 VStack(alignment: .leading) {
-                    Text(Helper.getFormattedPokeId(id: pokemon.id))
+                    Text(TextHelper.getFormattedPokeId(id: pokemon.id))
                         .fontWeight(.bold)
                     Text(pokemon.name.capitalized)
                         .font(.system(size: 24, weight: .bold))

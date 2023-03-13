@@ -49,7 +49,8 @@ struct MainView: View {
                 }
             }
             .tint(.black)
-        }.environmentObject(vm)
+        }
+        .environmentObject(vm)
     }
 }
 
@@ -57,16 +58,4 @@ struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
     }
-}
-
-extension View {
-  func readSize(onChange: @escaping (CGSize) -> Void) -> some View {
-    background(
-      GeometryReader { geometryProxy in
-        Color.clear
-          .preference(key: SizePreferenceKey.self, value: geometryProxy.size)
-      }
-    )
-    .onPreferenceChange(SizePreferenceKey.self, perform: onChange)
-  }
 }

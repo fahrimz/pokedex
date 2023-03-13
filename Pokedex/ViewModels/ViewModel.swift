@@ -194,7 +194,7 @@ final class ViewModel: ObservableObject {
     }
     
     func getPreviousSpeciesIndex() -> Int? {
-        return Helper.getIdFromUrl(url: self.speciesData?.evolves_from_species?.url)
+        return TextHelper.getIdFromUrl(url: self.speciesData?.evolves_from_species?.url)
     }
     
     func havePreviousSpecies() -> Bool {
@@ -222,6 +222,6 @@ final class ViewModel: ObservableObject {
     }
     
     func getCurrentEvoChainId() -> Int? {
-        return Helper.getIdFromUrl(url: self.speciesData?.evolution_chain.url)
+        return TextHelper.getIdFromUrl(url: self.speciesData?.evolution_chain.url)
     }
 }
