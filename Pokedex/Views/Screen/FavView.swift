@@ -80,6 +80,8 @@ struct FavCard: View {
                         
                         if pokemon.types.count > 1 {
                             TypeButton(bg: EPokeType(rawValue: pokemon.types[0].type.name.rawValue), text: pokemon.types[1].type.name.rawValue)
+                        } else {
+                            Spacer()
                         }
                     }.padding(.top)
                 }
@@ -87,8 +89,8 @@ struct FavCard: View {
                 Spacer()
                 
                 ZStack {
-                    SpriteImage(pokeId: pokemon.id, size: 130)
-                        .offset(x: 0, y: 15)
+                    SpriteImage(pokeId: pokemon.id, size: 150)
+                        .offset(x: 20, y: 20)
                         .background(
                             Image("pokeball_white")
                                 .resizable()
