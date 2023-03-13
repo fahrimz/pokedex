@@ -9,8 +9,7 @@ import SwiftUI
 
 struct FavView: View {
     @Environment(\.dismiss) private var dismiss
-    
-    let pokemons: [Pokemon]
+    @State var pokemons: [Pokemon] = []
     
     var body: some View {
         VStack {
@@ -31,8 +30,11 @@ struct FavView: View {
                 ScrollView {
                     VStack {
                         ForEach(pokemons, id: \.id){ mon in
-                            FavCard(pokemon: mon)
-                                .padding(.bottom)
+                            FavCard(pokemon: mon, onToggleFav: {
+                                pokemons = FavHelper.getFavPokemon()
+                            })
+                            .padding(.bottom)
+                            .animation(.linear(duration: 0.3), value: pokemons)
                         }
                     }
                 }
@@ -46,27 +48,21 @@ struct FavView: View {
             }
         }
         .navigationBarHidden(true)
+        .onAppear {
+            pokemons = FavHelper.getFavPokemon()
+        }
     }
 }
 
 struct FavView_Previews: PreviewProvider {
     static var previews: some View {
-        let pokemons: [Pokemon] = [
-            Pokemon.samplePokemon,
-            Pokemon.samplePokemon,
-            Pokemon.samplePokemon,
-            Pokemon.samplePokemon,
-            Pokemon.samplePokemon,
-            Pokemon.samplePokemon,
-            Pokemon.samplePokemon
-        ]
-        
-        FavView(pokemons: pokemons)
+        FavView()
     }
 }
 
 struct FavCard: View {
     let pokemon: Pokemon
+    let onToggleFav: () -> Void
     
     var body: some View {
         NavigationLink(destination: PokemonDetailView(pokemon: pokemon)) {
@@ -105,6 +101,10 @@ struct FavCard: View {
                     GeometryReader { geo in
                         Image(systemName: "star.fill").font(.system(size: 20))
                             .position(x: geo.size.width - 10, y: 5)
+                            .highPriorityGesture(TapGesture().onEnded {
+                                FavHelper.toggleFavPokemon(pokemon: pokemon)
+                                onToggleFav()
+                            })
                     }
                 }
             }

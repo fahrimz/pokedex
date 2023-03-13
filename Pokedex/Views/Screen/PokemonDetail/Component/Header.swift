@@ -10,6 +10,7 @@ import SwiftUI
 struct Header: View {
     let pokemon: Pokemon
     @Environment(\.dismiss) private var dismiss
+    @State var isFav = false
     
     var body: some View {
         VStack {
@@ -21,10 +22,14 @@ struct Header: View {
                 
                 Spacer()
                 
-                Image(systemName: "star")
+                Image(systemName: isFav ? "star.fill" : "star")
                     .font(.system(size: 24))
                     .foregroundColor(.white)
-                    .onTapGesture { dismiss() }
+                    .onTapGesture {
+                        FavHelper.toggleFavPokemon(pokemon: pokemon)
+                        isFav.toggle()
+                    }
+                    .animation(.interpolatingSpring(stiffness: 170, damping: 8), value: isFav)
             }.padding(.vertical, 20)
             
             HStack {
@@ -50,7 +55,11 @@ struct Header: View {
                     .font(.system(size: 20, weight: .bold))
                     .foregroundColor(.white)
             }
-        }.padding(.horizontal, 36)
+        }
+        .padding(.horizontal, 36)
+        .onAppear {
+            isFav = FavHelper.isPokemonAFav(id: pokemon.id)
+        }
     }
 }
 

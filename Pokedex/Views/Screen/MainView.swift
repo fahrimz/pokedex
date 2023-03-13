@@ -35,7 +35,7 @@ struct MainView: View {
                         .animation(.easeIn(duration: 0.3), value: vm.filterPokemon.count)
                         .navigationTitle("Pokedex")
                         .toolbar {
-                            NavigationLink(destination: FavView(pokemons: [])) {
+                            NavigationLink(destination: FavView()) {
                                 Image(systemName: "star")
                             }.foregroundColor(.black)
                         }

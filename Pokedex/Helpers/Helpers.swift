@@ -28,7 +28,7 @@ extension Bundle {
     
     func fetchData<T: Decodable>(url: String, model: T.Type, completion: @escaping(T) -> (), failure: @escaping(Error) -> ()) {
         guard let url = URL(string: url) else { return }
- 
+        
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data else {
                 if let error = error {
@@ -53,9 +53,21 @@ extension Encodable {
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
         guard let data = try? encoder.encode(self),
-            let output = String(data: data, encoding: .utf8)
-            else { return "Error converting \(self) to JSON string" }
+              let output = String(data: data, encoding: .utf8)
+        else { return "Error converting \(self) to JSON string" }
         return output
+    }
+}
+
+extension UserDefaults {
+    var pokemons: [Pokemon] {
+        get {
+            guard let data = UserDefaults.standard.data(forKey: "pokemons") else { return [] }
+            return (try? PropertyListDecoder().decode([Pokemon].self, from: data)) ?? []
+        }
+        set {
+            UserDefaults.standard.set(try? PropertyListEncoder().encode(newValue), forKey: "pokemons")
+        }
     }
 }
 
@@ -70,5 +82,45 @@ class Helper {
         }
         
         return nil
+    }
+}
+
+class FavHelper {
+    static func getFavPokemon() -> [Pokemon] {
+        return UserDefaults.standard.pokemons
+    }
+    
+    static func setFavPokemonArr(pokemons: [Pokemon]) {
+        UserDefaults.standard.pokemons = pokemons
+    }
+    
+    static func isPokemonAFav(id: Int) -> Bool {
+        let mons = getFavPokemon()
+        return mons.filter { $0.id == id }.count > 0
+    }
+    
+    private static func addFavPokemon(pokemon: Pokemon) {
+        var mons = getFavPokemon()
+        
+        if !isPokemonAFav(id: pokemon.id) {
+            mons.append(pokemon)
+            setFavPokemonArr(pokemons: mons)
+        }
+    }
+    
+    private static func removeFavPokemon(id: Int) {
+        var mons = getFavPokemon()
+        if let index = mons.firstIndex(where: { $0.id == id }) {
+            mons.remove(at: index)
+            setFavPokemonArr(pokemons: mons)
+        }
+    }
+    
+    static func toggleFavPokemon(pokemon: Pokemon) {
+        if isPokemonAFav(id: pokemon.id) {
+            removeFavPokemon(id: pokemon.id)
+        } else {
+            addFavPokemon(pokemon: pokemon)
+        }
     }
 }
