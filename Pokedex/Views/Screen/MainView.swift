@@ -34,6 +34,11 @@ struct MainView: View {
                         
                         .animation(.easeIn(duration: 0.3), value: vm.filterPokemon.count)
                         .navigationTitle("Pokedex")
+                        .toolbar {
+                            NavigationLink(destination: FavView(pokemons: [])) {
+                                Image(systemName: "star")
+                            }.foregroundColor(.black)
+                        }
                     }
                     .searchable(
                         text: $vm.searchText,
@@ -43,6 +48,7 @@ struct MainView: View {
                     
                 }
             }
+            .tint(.black)
         }.environmentObject(vm)
     }
 }

@@ -21,7 +21,7 @@ struct Header: View {
                 
                 Spacer()
                 
-                Image(systemName: "heart")
+                Image(systemName: "star")
                     .font(.system(size: 24))
                     .foregroundColor(.white)
                     .onTapGesture { dismiss() }

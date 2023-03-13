@@ -10,10 +10,6 @@ import SwiftUI
 struct PokemonView: View {
     @State var opacity: CGFloat = 0.0
     
-    let artwork = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork"
-    
-    let defaultSprite = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon"
-    
     @EnvironmentObject var vm: ViewModel
     let pokemon: Pokemon
     let dimensions: Double = 95
