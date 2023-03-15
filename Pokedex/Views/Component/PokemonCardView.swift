@@ -9,7 +9,6 @@ import SwiftUI
 
 struct PokemonView: View {
     @EnvironmentObject var vm: ViewModel
-    @State var opacity: CGFloat = 0.0
     
     let pokemon: Pokemon
     let dimensions: Double = 95
@@ -49,12 +48,6 @@ struct PokemonView: View {
         .padding(15)
         .background(Color(pokemon.types[0].type.name.rawValue))
         .clipShape(RoundedRectangle(cornerRadius: 25))
-        .opacity(opacity)
-        .onAppear {
-            withAnimation(.easeInOut(duration: 1)) {
-                opacity = 1
-            }
-        }
     }
 }
 

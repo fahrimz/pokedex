@@ -16,9 +16,18 @@ final class ViewModel: ObservableObject {
     @Published var speciesData: DetailPokemon2?
     @Published var evoChain: EvolutionChain?
     @Published var searchText = ""
+    @Published var pokemonType = ""
     
     var filterPokemon: [Pokemon] {
-        return searchText == "" ? pokemonList : pokemonList.filter {
+        var mons: [Pokemon] = pokemonList
+        
+        if pokemonType.count > 0 {
+            mons = mons.filter { poke in
+                poke.types.contains(where: { $0.type.name.rawValue == pokemonType })
+            }
+        }
+        
+        return searchText == "" ? mons : mons.filter {
             $0.name.contains(searchText.lowercased())
         }
     }
