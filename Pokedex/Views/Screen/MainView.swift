@@ -10,6 +10,7 @@ import SwiftUI
 struct MainView: View {
     @StateObject var vm = ViewModel()
     @State var isFilterShown = false
+    @State var isVersionShown = false
     
     private var cols: Array<GridItem> { Array(repeating: GridItem(spacing: 0), count: 2) }
     
@@ -53,9 +54,9 @@ struct MainView: View {
                         Image(systemName: "star")
                     }.foregroundColor(.black)
                     Image(systemName: "slider.horizontal.3")
-                        .onTapGesture {
-                            isFilterShown.toggle()
-                        }
+                        .alert("App Version \(AppInfo.appVersion)", isPresented: $isVersionShown) { }
+                        .onTapGesture { isFilterShown.toggle() }
+                        .onLongPressGesture { isVersionShown.toggle() }
                 }
             }
             .tint(.black)
