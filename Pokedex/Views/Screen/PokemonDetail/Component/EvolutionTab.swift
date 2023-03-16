@@ -10,8 +10,10 @@ import SwiftUI
 struct EvolutionTab: View {
     @EnvironmentObject var vm: ViewModel
     
+    let cols = Array(repeating: GridItem(.flexible()), count: 2)
+    
     var body: some View {
-        VStack(alignment: .center) {
+        VStack {
             if vm.haveEvolution() {
                 HStack {
                     if vm.evoChain != nil {
@@ -20,19 +22,29 @@ struct EvolutionTab: View {
                         if ((vm.evoChain?.chain.evolves_to.count ?? 0) > 0) {
                             Image(systemName: "arrow.right").font(.system(size: 14))
                             
-                            VStack {
-                                ForEach(vm.evoChain?.chain.evolves_to ?? [], id: \.species.name) { lvl2 in
-                                    HStack {
-                                        // second level
+                            if vm.getCurrentEvoChainId() == 67 { // eevee evolution chain
+                                LazyVGrid(columns: cols) {
+                                    ForEach(vm.evoChain?.chain.evolves_to ?? [], id: \.species.name) { lvl2 in
                                         EvoItem(id: TextHelper.getIdFromUrl(url: lvl2.species.url), name: lvl2.species.name)
-                                        
-                                        if lvl2.evolves_to.count > 0 {
-                                            Image(systemName: "arrow.right").font(.system(size: 14))
+                                    }
+                                }
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                            } else {
+                                VStack {
+                                    ForEach(vm.evoChain?.chain.evolves_to ?? [], id: \.species.name) { lvl2 in
+                                        HStack {
+                                            // second level
+                                            EvoItem(id: TextHelper.getIdFromUrl(url: lvl2.species.url), name: lvl2.species.name)
                                             
-                                            // third level
-                                            VStack {
-                                                ForEach(lvl2.evolves_to, id: \.species.name) { lvl3 in
-                                                    EvoItem(id: TextHelper.getIdFromUrl(url: lvl3.species.url), name: lvl3.species.name)
+                                            if lvl2.evolves_to.count > 0 {
+                                                Image(systemName: "arrow.right").font(.system(size: 14))
+                                                
+                                                // third level
+                                                VStack {
+                                                    ForEach(lvl2.evolves_to, id: \.species.name) { lvl3 in
+                                                        EvoItem(id: TextHelper.getIdFromUrl(url: lvl3.species.url), name: lvl3.species.name)
+                                                    }
                                                 }
                                             }
                                         }
@@ -43,7 +55,10 @@ struct EvolutionTab: View {
                     }
                 }
             } else {
-                Text("\(vm.getCurrentPokeName() ?? "This pokemon") does not evolve.").font(.system(size: 14)).foregroundColor(.gray)
+                Text("\(vm.getCurrentPokeName() ?? "This pokemon") does not evolve.")
+                    .font(.system(size: 14))
+                    .foregroundColor(.gray)
+                    .padding(.top)
             }
         }
         .frame(maxWidth: .infinity)

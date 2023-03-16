@@ -38,11 +38,16 @@ final class ViewModel: ObservableObject {
         // evolution tab preview only
 //        self.evoChain = EvolutionChain(
 //            chain: Chain(evolves_to: [
-//                Chain(evolves_to: [
-//                    Chain(evolves_to: [], species: Species(name: "venusaur", url: "https://pokeapi.co/api/v2/pokemon-species/3/"))
-//                ], species: Species(name: "ivysaur", url: "https://pokeapi.co/api/v2/pokemon-species/2/"))
+//                Chain(evolves_to: [], species: Species(name: "vaporeon", url: "https://pokeapi.co/api/v2/pokemon-species/134/")),
+//                Chain(evolves_to: [], species: Species(name: "jolteon", url: "https://pokeapi.co/api/v2/pokemon-species/135/")),
+//                Chain(evolves_to: [], species: Species(name: "flareon", url: "https://pokeapi.co/api/v2/pokemon-species/136/")),
+//                Chain(evolves_to: [], species: Species(name: "espeon", url: "https://pokeapi.co/api/v2/pokemon-species/196/")),
+//                Chain(evolves_to: [], species: Species(name: "umbreon", url: "https://pokeapi.co/api/v2/pokemon-species/197/")),
+//                Chain(evolves_to: [], species: Species(name: "leafeon", url: "https://pokeapi.co/api/v2/pokemon-species/470/")),
+//                Chain(evolves_to: [], species: Species(name: "glaceon", url: "https://pokeapi.co/api/v2/pokemon-species/471/")),
+//                Chain(evolves_to: [], species: Species(name: "sylveon", url: "https://pokeapi.co/api/v2/pokemon-species/700/"))
 //            ], species: Species(name: "bulbasaur", url: "https://pokeapi.co/api/v2/pokemon-species/1/")),
-//            id: 1
+//            id: 67
 //        )
     }
     
