@@ -54,7 +54,7 @@ struct MainView: View {
                         Image(systemName: "star")
                     }.foregroundColor(.black)
                     Image(systemName: "slider.horizontal.3")
-                        .alert("App Version \(AppInfo.appVersion)", isPresented: $isVersionShown) { }
+                        .alert("Pokedex App \nVersion \(AppInfo.version) (\(AppInfo.build))", isPresented: $isVersionShown) { }
                         .onTapGesture { isFilterShown.toggle() }
                         .onLongPressGesture { isVersionShown.toggle() }
                 }
