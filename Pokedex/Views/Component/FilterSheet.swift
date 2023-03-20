@@ -114,10 +114,10 @@ struct TypeToggle: View {
 
     var body: some View {
         Text(element.capitalized)
-            .font(.system(size: 12, weight: .bold))
+            .font(.system(size: UIDevice.isIPad ? 18 : 14, weight: .bold))
             .foregroundColor(selectedType == element ? .white : .black)
             .frame(maxWidth: .infinity)
-            .padding(10)
+            .padding(UIDevice.isIPad ? 20 : 10)
             .background(selectedType == element ? Color(element) : .white)
             .border(selectedType == element ? Color("\(element)2") : .black)
 //            .overlay(

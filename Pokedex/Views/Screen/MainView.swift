@@ -12,7 +12,8 @@ struct MainView: View {
     @State var isFilterShown = false
     @State var isVersionShown = false
     
-    private var cols: Array<GridItem> { Array(repeating: GridItem(spacing: 0), count: 2) }
+    private var colsNum = UIDevice.isIPad ? 4 : 2
+    private var cols: Array<GridItem> { Array(repeating: GridItem(spacing: 0), count: colsNum) }
     
     var body: some View {
         GeometryReader { geo in
@@ -27,7 +28,7 @@ struct MainView: View {
                     
                     if vm.filterPokemon.count > 0 {
                         ScrollView {
-                            LazyVGrid(columns: cols) {
+                            LazyVGrid(columns: cols, spacing: 20) {
                                 ForEach(vm.filterPokemon) { pokemon in
                                     NavigationLink(destination: PokemonDetailView(pokemon: pokemon)) {
                                         PokemonView(pokemon: pokemon)
@@ -60,6 +61,7 @@ struct MainView: View {
                 }
             }
             .tint(.black)
+            .navigationViewStyle(StackNavigationViewStyle())
         }
         .sheet(isPresented: $isFilterShown) {
             FilterSheet(selectedType: $vm.pokemonType, onSave: {

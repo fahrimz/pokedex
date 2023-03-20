@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1100EF6129C44FAD00F2CD21 /* DeviceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1100EF6029C44FAD00F2CD21 /* DeviceHelper.swift */; };
 		110AB0A529C1E8B5000E0845 /* StatefulPreviewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110AB0A429C1E8B5000E0845 /* StatefulPreviewWrapper.swift */; };
 		110F7F9529AC8D1D00245BB7 /* SlidingTabView in Frameworks */ = {isa = PBXBuildFile; productRef = 110F7F9429AC8D1D00245BB7 /* SlidingTabView */; };
 		110F7F9829AC910300245BB7 /* AboutTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110F7F9729AC910300245BB7 /* AboutTab.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1100EF6029C44FAD00F2CD21 /* DeviceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceHelper.swift; sourceTree = "<group>"; };
 		110AB0A429C1E8B5000E0845 /* StatefulPreviewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulPreviewWrapper.swift; sourceTree = "<group>"; };
 		110F7F9729AC910300245BB7 /* AboutTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTab.swift; sourceTree = "<group>"; };
 		110F7F9929AC911D00245BB7 /* StatTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatTab.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				11256D6529BF56DA00C59EDF /* FavHelper.swift */,
 				110AB0A429C1E8B5000E0845 /* StatefulPreviewWrapper.swift */,
 				117679A729C32D2D005BCFD4 /* AppInfo.swift */,
+				1100EF6029C44FAD00F2CD21 /* DeviceHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		1100EF5F29C4450E00F2CD21 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -340,6 +344,7 @@
 				11A961A629A8AA68006F379B /* PokemonDetailView.swift in Sources */,
 				110AB0A529C1E8B5000E0845 /* StatefulPreviewWrapper.swift in Sources */,
 				110F7F9E29AC913900245BB7 /* MoveTab.swift in Sources */,
+				1100EF6129C44FAD00F2CD21 /* DeviceHelper.swift in Sources */,
 				11A9619F29A8A7B1006F379B /* Extension.swift in Sources */,
 				1174C53029C1B9DF00B13429 /* FilterSheet.swift in Sources */,
 			);

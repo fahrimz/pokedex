@@ -11,6 +11,18 @@ struct FavView: View {
     @Environment(\.dismiss) private var dismiss
     @State var pokemons: [Pokemon] = []
     
+    let cols = Array(repeating: GridItem(.flexible(), spacing: 20), count: 2)
+    
+    var cards: some View {
+        ForEach(pokemons, id: \.id){ mon in
+            FavCard(pokemon: mon, onToggleFav: {
+                pokemons = FavHelper.getFavPokemon()
+            })
+            .padding(.bottom)
+            .animation(.linear(duration: 0.3), value: pokemons)
+        }
+    }
+    
     var body: some View {
         VStack {
             HStack {
@@ -26,16 +38,19 @@ struct FavView: View {
             }
             .padding(.vertical, 20)
             .padding(.horizontal, 36)
+            .padding([.top, .horizontal], UIDevice.isIPad ? 50 : 0)
             
             if pokemons.count > 0 {
                 ScrollView {
-                    VStack {
-                        ForEach(pokemons, id: \.id){ mon in
-                            FavCard(pokemon: mon, onToggleFav: {
-                                pokemons = FavHelper.getFavPokemon()
-                            })
-                            .padding(.bottom)
-                            .animation(.linear(duration: 0.3), value: pokemons)
+                    if UIDevice.isIPad {
+                        LazyVGrid(columns: cols) {
+                            cards
+                        }
+                        .padding(.horizontal, 50)
+                        .padding(.top, 20)
+                    } else {
+                        VStack {
+                            cards
                         }
                     }
                 }
@@ -69,18 +84,20 @@ struct FavCard: View {
         NavigationLink(destination: PokemonDetailView(pokemon: pokemon)) {
             HStack {
                 VStack(alignment: .leading) {
-                    Text(TextHelper.getFormattedPokeId(id: pokemon.id))
-                        .fontWeight(.bold)
-                    Text(pokemon.name.capitalized)
-                        .font(.system(size: 24, weight: .bold))
+                    Group {
+                        Text(TextHelper.getFormattedPokeId(id: pokemon.id))
+                            .fontWeight(.bold)
+                        Text(pokemon.name.capitalized)
+                            .font(.system(size: 24, weight: .bold))
+                    }
                     
                     Spacer()
                     
                     HStack {
-                        TypeButton(bg: EPokeType(rawValue: pokemon.types[0].type.name.rawValue), text: pokemon.types[0].type.name.rawValue)
+                        TypeButton(bg: EPokeType(rawValue: pokemon.types[0].type.name.rawValue), text: pokemon.types[0].type.name.rawValue, adaptive: true)
                         
                         if pokemon.types.count > 1 {
-                            TypeButton(bg: EPokeType(rawValue: pokemon.types[0].type.name.rawValue), text: pokemon.types[1].type.name.rawValue)
+                            TypeButton(bg: EPokeType(rawValue: pokemon.types[0].type.name.rawValue), text: pokemon.types[1].type.name.rawValue, adaptive: true)
                         } else {
                             Spacer()
                         }
@@ -102,8 +119,8 @@ struct FavCard: View {
                         )
                     
                     GeometryReader { geo in
-                        Image(systemName: "star.fill").font(.system(size: 20))
-                            .position(x: geo.size.width - 10, y: 5)
+                        Image(systemName: "star.fill").font(.system(size: UIDevice.isIPad ? 24 : 20))
+                            .position(x: geo.size.width - (UIDevice.isIPad ? 15 : 10), y: UIDevice.isIPad ? 10 : 5)
                             .highPriorityGesture(TapGesture().onEnded {
                                 FavHelper.toggleFavPokemon(pokemon: pokemon)
                                 onToggleFav()

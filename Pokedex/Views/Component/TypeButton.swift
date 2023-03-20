@@ -10,9 +10,11 @@ import SwiftUI
 struct TypeButton: View {
     let bg: EPokeType?
     let text: String?
+    var adaptive: Bool = false
+    
     var body: some View {
         Text("**\(text?.capitalized ?? "Unknown")**")
-            .font(.system(size: 12))
+            .font(.system(size: adaptive ? (UIDevice.isIPad ? 16 : 12) : 12))
             .padding(EdgeInsets(top: 6, leading: 14, bottom: 6, trailing: 14))
             .foregroundStyle(Color.white.shadow(.drop(radius: 2)))
             .background(Color("\(bg?.rawValue ?? EPokeType.unknown.rawValue)2"))
