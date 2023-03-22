@@ -9,6 +9,7 @@ import SwiftUI
 import SlidingTabView
 
 struct PokemonDetailView: View {
+    @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var vm: ViewModel
     @Environment(\.dismiss) private var dismiss
     @State private var tabIndex = 0
@@ -49,7 +50,8 @@ struct PokemonDetailView: View {
                         selection: $tabIndex,
                         tabs: ["About", "Base Stats", "Evolution", "Moves"],
                         font: .system(size: 14),
-                        activeAccentColor: .black,
+                        activeAccentColor: colorScheme == .dark ? .white : .black,
+                        inactiveAccentColor: colorScheme == .dark ? .white : .black,
                         selectionBarColor: Color(pokemon.types[0].type.name.rawValue),
                         selectionBarHeight: 2
                     )
@@ -75,7 +77,7 @@ struct PokemonDetailView: View {
                 }
                 .frame(maxWidth: .infinity)
                 .clipped()
-                .background(.white)
+                .background(colorScheme == .dark ? .black : .white)
                 .padding(.bottom, cornerRadius)
                 .cornerRadius(cornerRadius)
                 .padding(.bottom, -cornerRadius - 50)

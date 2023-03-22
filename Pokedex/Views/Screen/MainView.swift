@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
+    @Environment(\.colorScheme) private var colorScheme
     @StateObject var vm = ViewModel()
     @State var isFilterShown = false
     @State var isVersionShown = false
@@ -19,12 +20,14 @@ struct MainView: View {
         GeometryReader { geo in
             NavigationView {
                 ZStack {
-                    Image("pokeball_gray")
-                        .resizable()
-                        .frame(width: 200, height: 200)
-                        .position(x: geo.size.width - 90, y: 25)
-                        .rotationEffect(Angle(degrees: 5))
-                        .ignoresSafeArea()
+                    if colorScheme == .light {
+                        Image("pokeball_gray")
+                            .resizable()
+                            .frame(width: 200, height: 200)
+                            .position(x: geo.size.width - 90, y: 25)
+                            .rotationEffect(Angle(degrees: 5))
+                            .ignoresSafeArea()
+                    }
                     
                     if vm.filterPokemon.count > 0 {
                         ScrollView {
@@ -53,7 +56,7 @@ struct MainView: View {
                 .toolbar {
                     NavigationLink(destination: FavView()) {
                         Image(systemName: "star")
-                    }.foregroundColor(.black)
+                    }.foregroundColor(colorScheme == .dark ? .white : .black)
                     Image(systemName: "slider.horizontal.3")
                         .alert("Pokedex App \nVersion \(AppInfo.version) (\(AppInfo.build))", isPresented: $isVersionShown) { }
                         .onTapGesture { isFilterShown.toggle() }
