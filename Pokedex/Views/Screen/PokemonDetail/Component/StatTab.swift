@@ -11,11 +11,19 @@ struct StatTab: View {
     @EnvironmentObject var vm: ViewModel
     
     var statData: some View {
-        Group {
+        VStack {
             ForEach(vm.pokemonDetails?.stats ?? [], id: \.stat.name) {
                 StatItemView(field: $0.stat.name.replacingOccurrences(of: "special-attack", with: "Sp. Atk").replacingOccurrences(of: "special-defense", with: "Sp. Def").capitalized, value: $0.base_stat)
                     .fixedSize(horizontal: false, vertical: true)
             }
+            
+            Divider().padding(.vertical)
+            
+            Text("Total Stat: \(vm.getTotalStat())")
+                .font(.system(.headline))
+                .frame(maxWidth: .infinity, alignment: .leading)
+            
+            
         }
     }
     

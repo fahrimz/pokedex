@@ -49,6 +49,35 @@ final class ViewModel: ObservableObject {
 //            ], species: Species(name: "bulbasaur", url: "https://pokeapi.co/api/v2/pokemon-species/1/")),
 //            id: 67
 //        )
+        
+        // // stat tab preview only
+        // self.pokemonDetails = DetailPokemon1(
+        //     id: 2,
+        //     name: "ivysaur",
+        //     weight: 0,
+        //     height: 0,
+        //     types: [
+        //         TypeElement(slot: 1, type: PokeType(name: EPokeType.grass)),
+        //         TypeElement(slot: 2, type: PokeType(name: EPokeType.poison))
+        //     ],
+        //     abilities: [
+        //         Ability(ability: AbilityName(name: "Overgrow")),
+        //         Ability(ability: AbilityName(name: "Chlorophyl"))
+        //     ],
+        //     base_experience: 60,
+        //     stats: [
+        //         Stat(base_stat: 45, effort: 0, stat: StatName(name: "hp")),
+        //         Stat(base_stat: 49, effort: 0, stat: StatName(name: "attack")),
+        //         Stat(base_stat: 49, effort: 0, stat: StatName(name: "defense")),
+        //         Stat(base_stat: 65, effort: 1, stat: StatName(name: "special-attack")),
+        //         Stat(base_stat: 65, effort: 0, stat: StatName(name: "special-defense")),
+        //         Stat(base_stat: 45, effort: 0, stat: StatName(name: "speed")),
+        //     ],
+        //     moves: [
+        //         Move(move: MoveName(name: "vine-whip")),
+        //         Move(move: MoveName(name: "headbutt")),
+        //     ]
+        // )
     }
     
     func getPokemonIndex(pokemon: Pokemon) -> Int {
@@ -237,5 +266,13 @@ final class ViewModel: ObservableObject {
     
     func getCurrentEvoChainId() -> Int? {
         return TextHelper.getIdFromUrl(url: self.speciesData?.evolution_chain.url)
+    }
+    
+    func getTotalStat() -> Int {
+        guard let stats = self.pokemonDetails?.stats else {
+            return 0
+        }
+        
+        return stats.map({ $0.base_stat }).reduce(0) { $0 + $1 }
     }
 }
